@@ -5,6 +5,7 @@ import BackgroundSidebar from "./Sidebar/BackgroundSidebar";
 import ModelSidebar from "./Sidebar/ModelSidebar";
 import { SettingsContext } from "../contexts/SettingsContext";
 import Experimental from "./Sidebar/Experimental";
+import AnimationSidebar from "./Sidebar/AnimationSidebar";
 
 const Sidebar: React.FC = () => {
     const scene = useContext(SceneContext);
@@ -20,6 +21,7 @@ const Sidebar: React.FC = () => {
             {openedSidebar == "background" && <BackgroundSidebar />}
             {openedSidebar == "text" && <TextSidebar />}
             {openedSidebar == "model" && <ModelSidebar />}
+            {openedSidebar == "animation" && <AnimationSidebar />}
             {startingMessage && <p>{startingMessage}</p>}
             {showExperimental && <Experimental />}
         </div>

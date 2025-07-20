@@ -4,7 +4,11 @@ import { SceneContext } from "../contexts/SceneContext";
 import { IJsonSave } from "../types/IJsonSave";
 import { ValidateJsonSave } from "../utils/ValidateJsonSave";
 import { getBackground } from "../utils/GetBackground";
-import { Live2DModel, Cubism4InternalModel } from "pixi-live2d-display";
+import {
+    Live2DModel,
+    Cubism4InternalModel,
+    MotionPriority,
+} from "pixi-live2d-display";
 import IModel from "../types/IModel";
 import Window from "./UI/Window";
 import { SettingsContext } from "../contexts/SettingsContext";
@@ -173,9 +177,16 @@ const ExportButton: React.FC = () => {
                 model?.modelExpression !== 99999 ||
                 model?.modelExpression !== 99999
             ) {
-                live2DModel.motion("Expression", model.modelExpression);
-                await new Promise((resolve) => setTimeout(resolve, 2000));
-                live2DModel.motion("Motion", model.modelPose);
+                live2DModel.motion(
+                    "Expression",
+                    model.modelExpression,
+                    MotionPriority.NORMAL
+                );
+                live2DModel.motion(
+                    "Motion",
+                    model.modelPose,
+                    MotionPriority.FORCE
+                );
             }
 
             if (model?.modelParametersChanged) {

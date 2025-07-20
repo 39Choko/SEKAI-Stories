@@ -40,6 +40,16 @@ const SidebarSelect: React.FC = () => {
             >
                 <i className="sidebar__select bi bi-person-fill"></i>
             </button>
+            <button
+                onClick={() => {
+                    setOpenedSidebar("animation");
+                }}
+                className={`btn-circle ${
+                    openedSidebar == "animation" ? "btn-orange" : "btn-white"
+                }`}
+            >
+                <i className="sidebar__select bi bi-film"></i>
+            </button>
         </div>
     );
 };
