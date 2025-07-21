@@ -370,7 +370,7 @@ const LoadSceneText = async (
 
     app.stage.addChildAt(sceneTextContainer, childAt);
 
-    sceneTextContainer.visible = false;
+    sceneTextContainer.alpha = 0;
 
     return {
         sceneTextContainer: sceneTextContainer,

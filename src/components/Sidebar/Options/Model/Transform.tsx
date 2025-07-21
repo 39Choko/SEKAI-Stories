@@ -95,7 +95,7 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
     const handleVisible = (event: React.ChangeEvent<HTMLInputElement>) => {
         const visible = Boolean(event?.target.checked);
         if (currentModel?.model) {
-            currentModel.model.visible = visible;
+            currentModel.model.alpha = visible ? 1 : 0;
         }
         updateModelState({ visible: visible });
     };

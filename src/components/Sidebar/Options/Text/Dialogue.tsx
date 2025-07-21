@@ -47,7 +47,7 @@ const Dialogue: React.FC<DialogueProps> = ({
     ) => {
         const visible = Boolean(event?.target.checked);
         if (text?.textContainer) {
-            text.textContainer.visible = visible;
+            text.textContainer.alpha = visible ? 1 : 0;
         }
         setText({
             ...text,

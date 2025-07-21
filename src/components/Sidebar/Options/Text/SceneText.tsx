@@ -19,13 +19,13 @@ const SceneText: React.FC = () => {
     ) => {
         const visible = Boolean(event?.target.checked);
         if (sceneText?.sceneTextContainer) {
-            sceneText.sceneTextContainer.visible = visible;
+            sceneText.sceneTextContainer.alpha = visible ? 1 : 0;
         }
         if (!visible && text.hideEverything) {
             if (modelContainer) {
-                modelContainer.visible = true;
+                modelContainer.alpha = visible ? 1 : 0;
             }
-            text.textContainer.visible = true;
+            text.textContainer.alpha = visible ? 1 : 0;
         }
         setSceneText({
             ...sceneText,
