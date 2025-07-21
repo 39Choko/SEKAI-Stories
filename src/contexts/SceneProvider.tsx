@@ -14,6 +14,7 @@ import { SoftErrorContext } from "./SoftErrorContext";
 import { useTranslation } from "react-i18next";
 import { SettingsContext } from "./SettingsContext";
 import { IFilter } from "../types/IFilter";
+import { IAnimationFrame } from "../types/IAnimationFrame";
 
 interface SceneProviderProps {
     children: React.ReactNode;
@@ -59,6 +60,9 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
     const [startingMessage, setStartingMessage] = useState<string>("");
     const [sceneJson, setSceneJson] = useState<IJsonSave | undefined>(
         undefined
+    );
+    const [animationFrames, setAnimationFrames] = useState<IAnimationFrame[]>(
+        []
     );
     const [initialState, setInitialState] = useState<boolean>(true);
 
@@ -144,6 +148,8 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
                 setReset,
                 startingMessage,
                 setStartingMessage,
+                animationFrames,
+                setAnimationFrames,
                 initialState,
                 setInitialState,
             }}

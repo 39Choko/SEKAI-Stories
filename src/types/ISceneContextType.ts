@@ -8,6 +8,7 @@ import IGuideline from "./IGuideline";
 import { IJsonSave } from "./IJsonSave";
 import { ISplitBackground } from "./ISplitBackground";
 import { IFilter } from "./IFilter";
+import { IAnimationFrame } from "./IAnimationFrame";
 export default interface ISceneContextType {
     app: PIXI.Application | undefined;
     setApp: Dispatch<SetStateAction<PIXI.Application | undefined>>;
@@ -41,6 +42,8 @@ export default interface ISceneContextType {
     setReset: Dispatch<SetStateAction<number>>;
     startingMessage: string;
     setStartingMessage: Dispatch<SetStateAction<string>>;
+    animationFrames: IAnimationFrame[];
+    setAnimationFrames: Dispatch<SetStateAction<IAnimationFrame[]>>;
     initialState: boolean;
     setInitialState: Dispatch<SetStateAction<boolean>>;
 }
