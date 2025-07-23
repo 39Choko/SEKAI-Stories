@@ -14,6 +14,7 @@ export interface IAnimationTalk {
         rotation: number;
         pose: number;
         expression: number;
+        opacity: number;
     }[];
 }
 
@@ -31,7 +32,7 @@ export interface IAnimationMotion {
 }
 
 export interface IAnimationBackgroundChange {
-    backgroundId: number;
+    backgroundFile: string
 }
 
 export interface IAnimationFrame {
@@ -42,7 +43,11 @@ export interface IAnimationFrame {
         | "BackgroundChange"
         | "FadeInBlack"
         | "FadeOutBlack";
-    data: IAnimationSceneText | IAnimationTalk | IAnimationMotion | IAnimationBackgroundChange
+    data:
+        | IAnimationSceneText
+        | IAnimationTalk
+        | IAnimationMotion
+        | IAnimationBackgroundChange;
 }
 
 export interface IAnimationData {
