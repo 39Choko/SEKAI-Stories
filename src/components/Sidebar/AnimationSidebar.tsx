@@ -1,23 +1,42 @@
 import React, { useContext, useState } from "react";
 import { SceneContext } from "../../contexts/SceneContext";
-import {
-    IAnimationFrame,
-} from "../../types/IAnimationFrame";
+import { IAnimationFrame, IAnimationTalk } from "../../types/IAnimationFrame";
 
 const AnimationSidebar: React.FC = () => {
     const scene = useContext(SceneContext);
-    const [selectedType, setSelectedType] = useState("sceneText");
+    const [selectedType, setSelectedType] = useState<string>("sceneText");
+    const [selectedFrame, setSelectedFrame] = useState<number>(0);
 
     if (!scene) throw new Error("Context not found");
 
-    const { animationFrames, setAnimationFrames, sceneText } = scene;
+    const {
+        animationFrames,
+        setAnimationFrames,
+        background,
+        text,
+        sceneText,
+        models,
+    } = scene;
+
+    const nextFrame = async () => {
+        const exit = animationFrames[selectedFrame]?.type ?? null;
+        const entrance = animationFrames[selectedFrame + 1]?.type ?? null;
+        setSelectedFrame(selectedFrame + 1);
+    };
 
     const handleAddFrame = () => {
-        let data: IAnimationFrame | null = null;
+        let data: IAnimationFrame | IAnimationTalk | null = null;
 
+        if (
+            !background ||
+            !text?.dialogue ||
+            !text?.nameTag ||
+            !sceneText?.textString ||
+            !models
+        )
+            return;
         switch (selectedType) {
             case "sceneText":
-                if (!sceneText?.textString) return;
                 data = {
                     type: "SceneText",
                     data: {
@@ -25,8 +44,51 @@ const AnimationSidebar: React.FC = () => {
                     },
                 };
                 break;
-
-            // Extend with other cases if needed...
+            case "talk":
+                data = {
+                    type: "Talk",
+                    data: {
+                        nameTag: text.nameTagString,
+                        dialogue: text.dialogueString,
+                        models: Object.values(models).map((e, idx) => ({
+                            index: idx,
+                            x: e.modelX,
+                            y: e.modelY,
+                            scale: e.modelScale,
+                            rotation: e.modelRotation,
+                            pose: e.pose,
+                            expression: e.expression,
+                            opacity: e.model.alpha,
+                        })),
+                    },
+                };
+                break;
+            case "motion":
+                data = {
+                    type: "Motion",
+                    data: {
+                        dialogueVisible: text.visible,
+                        models: Object.values(models).map((e, idx) => ({
+                            index: idx, 
+                            x: e.modelX,
+                            y: e.modelY,
+                            scale: e.modelScale,
+                            rotation: e.modelRotation,
+                            pose: e.pose,
+                            expression: e.expression,
+                            opacity: e.model.alpha,
+                        })),
+                    },
+                };
+                break;
+            case "background":
+                data = {
+                    type: "BackgroundChange",
+                    data: {
+                        backgroundFile: background.filename,
+                    },
+                };
+                break;
         }
 
         if (!data) return;
@@ -45,10 +107,8 @@ const AnimationSidebar: React.FC = () => {
                 >
                     <option value="sceneText">Scene Text</option>
                     <option value="talk">Talk</option>
-                    <option>Motion</option>
-                    <option>Background Change</option>
-                    <option>Fade-in to Black</option>
-                    <option>Fade-out to Black</option>
+                    <option value="motion">Motion</option>
+                    <option value="background">Background Change</option>
                 </select>
                 <button
                     className="btn-extend-width btn-blue btn-regular"
@@ -59,15 +119,35 @@ const AnimationSidebar: React.FC = () => {
             </div>
             <div className="option">
                 <h2>Playback</h2>
+                <button
+                    className="btn-extend-width btn-blue btn-regular"
+                    onClick={nextFrame}
+                >
+                    Next
+                </button>
             </div>
             <div className="option">
                 <h2>Frames</h2>
+                {animationFrames.map((e: IAnimationFrame, idx) => (
+                    <div key={idx}>
+                        <p>{e.type}</p>
+                        <p>{JSON.stringify(e.data)}</p>
+                    </div>
+                ))}
             </div>
             <div className="option">
-                <h2>Details</h2>
+                <h2>Lookup Table</h2>
                 <div className="option__content">
                     <h3>Initial Background</h3>
                     <h3>Models</h3>
+                    <div>
+                        {models &&
+                            Object.values(models).map((e, idx) => (
+                                <>
+                                    {idx}. {e.modelName}
+                                </>
+                            ))}
+                    </div>
                     <h3>Backgrounds</h3>
                 </div>
             </div>
