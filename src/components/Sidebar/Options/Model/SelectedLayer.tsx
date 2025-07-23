@@ -52,6 +52,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
         currentModel,
         setCurrentModel,
         setInitialState,
+        animationFrames,
     } = scene;
 
     const { setErrorInformation } = softError;
@@ -151,6 +152,10 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
 
     const handleDeleteLayer = async () => {
         const modelsObjects = Object.entries(scene.models ?? {});
+        if (animationFrames.length != 0) {
+            setErrorInformation(t("You have started a new Animation. Please hide the layer instead."));
+            return;
+        }
         if (modelsObjects.length == 1) {
             setErrorInformation(t("model.delete-model-warn"));
             return;
