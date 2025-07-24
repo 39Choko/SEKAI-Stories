@@ -1044,6 +1044,10 @@ select:disabled {
   margin: 5px 0px;
 }
 
+.frames_selected {
+  border: 2px solid #00ccbb;
+}
+
 .loading-container {
   height: 100px;
   width: 100px;

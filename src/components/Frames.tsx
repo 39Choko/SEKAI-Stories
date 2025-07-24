@@ -4,11 +4,23 @@ import { IAnimationData } from "../types/IAnimationFrame";
 interface FramesProps {
     type: string;
     data: IAnimationData;
+    selected: boolean;
+    index: number;
+    onSelect: (index: number) => void;
 }
 
-const Frames: React.FC<FramesProps> = ({ type, data }) => {
+const Frames: React.FC<FramesProps> = ({
+    type,
+    data,
+    selected,
+    index,
+    onSelect,
+}) => {
     return (
-        <div className="frames">
+        <div
+            className={selected ? "frames frames_selected" : "frames"}
+            onClick={() => onSelect(index)}
+        >
             <h3>{type}</h3>
             {type === "SceneText" && "sceneText" in data && (
                 <p>Scene: {data.sceneText}</p>

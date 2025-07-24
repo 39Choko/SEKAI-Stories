@@ -91,6 +91,18 @@ const AnimationSidebar: React.FC = () => {
         setAnimationFrames((prev) => [...prev, data]);
     };
 
+    const handleSelectFrame = (index: number) => {
+        setSelectedFrame(index);
+        const frameData = animationFrames[index];
+
+        switch (frameData.type) {
+            case "SceneText":
+                if ("sceneText" in frameData.data)
+                    console.log(frameData.data.sceneText);
+                break;
+        }
+    };
+
     return (
         <div>
             <h1>Animation</h1>
@@ -123,22 +135,29 @@ const AnimationSidebar: React.FC = () => {
             </div>
             <div className="option">
                 <h2>Frames</h2>
-                {animationFrames.map((e: IAnimationFrame) => (
-                    <Frames type={e.type} data={e.data} />
+                {animationFrames.map((e: IAnimationFrame, idx) => (
+                    <Frames
+                        type={e.type}
+                        data={e.data}
+                        selected={idx == selectedFrame}
+                        index={idx}
+                        onSelect={handleSelectFrame}
+                    />
                 ))}
             </div>
             <div className="option">
                 <h2>Lookup Table</h2>
                 <div className="option__content">
                     <h3>Models</h3>
-                    <div>
+                    <table>
                         {models &&
                             Object.entries(models).map(([key, e]) => (
-                                <p>
-                                    {key}: {e.modelName}
-                                </p>
+                                <tr key={key}>
+                                    <td>{key}</td>
+                                    <td>{e.modelName}</td>
+                                </tr>
                             ))}
-                    </div>
+                    </table>
                     <h3>Backgrounds</h3>
                 </div>
             </div>

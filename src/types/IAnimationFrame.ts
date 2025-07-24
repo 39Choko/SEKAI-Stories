@@ -35,6 +35,12 @@ export interface IAnimationBackgroundChange {
     backgroundFile: string;
 }
 
+export type IAnimationData =
+    | IAnimationSceneText
+    | IAnimationTalk
+    | IAnimationMotion
+    | IAnimationBackgroundChange;
+
 export interface IAnimationFrame {
     type:
         | "SceneText"
@@ -43,15 +49,5 @@ export interface IAnimationFrame {
         | "BackgroundChange"
         | "FadeInBlack"
         | "FadeOutBlack";
-    data:
-        | IAnimationSceneText
-        | IAnimationTalk
-        | IAnimationMotion
-        | IAnimationBackgroundChange;
-}
-
-export interface IAnimationData {
-    models: IModel[];
-    backgrounds: string[];
-    frames: IAnimationFrame[];
+    data: IAnimationData;
 }
