@@ -50,8 +50,8 @@ const AnimationSidebar: React.FC = () => {
                     data: {
                         nameTag: text.nameTagString,
                         dialogue: text.dialogueString,
-                        models: Object.values(models).map((e, idx) => ({
-                            index: idx,
+                        models: Object.entries(models).map(([key, e]) => ({
+                            key: key,
                             x: e.modelX,
                             y: e.modelY,
                             scale: e.modelScale,
@@ -68,8 +68,8 @@ const AnimationSidebar: React.FC = () => {
                     type: "Motion",
                     data: {
                         dialogueVisible: text.visible,
-                        models: Object.values(models).map((e, idx) => ({
-                            index: idx, 
+                        models: Object.entries(models).map(([key, e]) => ({
+                            key: key,
                             x: e.modelX,
                             y: e.modelY,
                             scale: e.modelScale,

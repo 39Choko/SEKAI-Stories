@@ -7,7 +7,7 @@ export interface IAnimationTalk {
     nameTag: string;
     dialogue: string;
     models: {
-        index: number;
+        key: string;
         x: number;
         y: number;
         scale: number;
@@ -21,7 +21,7 @@ export interface IAnimationTalk {
 export interface IAnimationMotion {
     dialogueVisible: boolean;
     models: {
-        index: number;
+        key: string;
         x: number;
         y: number;
         scale: number;
@@ -32,7 +32,7 @@ export interface IAnimationMotion {
 }
 
 export interface IAnimationBackgroundChange {
-    backgroundFile: string
+    backgroundFile: string;
 }
 
 export interface IAnimationFrame {
