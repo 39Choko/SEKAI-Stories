@@ -1038,6 +1038,12 @@ select:disabled {
   text-align: center;
 }
 
+.frames {
+  border: 2px solid #444466;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
 .loading-container {
   height: 100px;
   width: 100px;

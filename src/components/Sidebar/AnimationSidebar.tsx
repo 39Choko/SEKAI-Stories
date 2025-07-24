@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { SceneContext } from "../../contexts/SceneContext";
 import { IAnimationFrame, IAnimationTalk } from "../../types/IAnimationFrame";
+import Frames from "../Frames";
 
 const AnimationSidebar: React.FC = () => {
     const scene = useContext(SceneContext);
@@ -17,12 +18,6 @@ const AnimationSidebar: React.FC = () => {
         sceneText,
         models,
     } = scene;
-
-    const nextFrame = async () => {
-        const exit = animationFrames[selectedFrame]?.type ?? null;
-        const entrance = animationFrames[selectedFrame + 1]?.type ?? null;
-        setSelectedFrame(selectedFrame + 1);
-    };
 
     const handleAddFrame = () => {
         let data: IAnimationFrame | IAnimationTalk | null = null;
@@ -119,33 +114,29 @@ const AnimationSidebar: React.FC = () => {
             </div>
             <div className="option">
                 <h2>Playback</h2>
-                <button
-                    className="btn-extend-width btn-blue btn-regular"
-                    onClick={nextFrame}
-                >
+                <button className="btn-extend-width btn-blue btn-regular">
+                    Play
+                </button>
+                <button className="btn-extend-width btn-blue btn-regular">
                     Next
                 </button>
             </div>
             <div className="option">
                 <h2>Frames</h2>
-                {animationFrames.map((e: IAnimationFrame, idx) => (
-                    <div key={idx}>
-                        <p>{e.type}</p>
-                        <p>{JSON.stringify(e.data)}</p>
-                    </div>
+                {animationFrames.map((e: IAnimationFrame) => (
+                    <Frames type={e.type} data={e.data} />
                 ))}
             </div>
             <div className="option">
                 <h2>Lookup Table</h2>
                 <div className="option__content">
-                    <h3>Initial Background</h3>
                     <h3>Models</h3>
                     <div>
                         {models &&
-                            Object.values(models).map((e, idx) => (
-                                <>
-                                    {idx}. {e.modelName}
-                                </>
+                            Object.entries(models).map(([key, e]) => (
+                                <p>
+                                    {key}: {e.modelName}
+                                </p>
                             ))}
                     </div>
                     <h3>Backgrounds</h3>
