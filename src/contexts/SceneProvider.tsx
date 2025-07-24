@@ -104,6 +104,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
         setStartingMessage("");
         setLayers(1);
         setInitialState(true);
+        setAnimationFrames([]);
     };
 
     useEffect(() => {
