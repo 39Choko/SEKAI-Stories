@@ -238,7 +238,9 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
                 <Checkbox
                     id="visible"
                     label={t("visible")}
-                    checked={currentModel?.visible}
+                    checked={
+                        currentModel?.visible || currentModel.model.alpha == 0
+                    }
                     onChange={handleVisible}
                 />
             </div>

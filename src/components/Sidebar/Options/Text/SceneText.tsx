@@ -12,7 +12,7 @@ const SceneText: React.FC = () => {
 
     const { text, setText, sceneText, setSceneText, modelContainer } = scene;
 
-    if (!text || !sceneText) return t("please-wait");
+    if (!text || !sceneText || !modelContainer) return t("please-wait");
 
     const handleSceneTextVisible = (
         event: React.ChangeEvent<HTMLInputElement>
@@ -22,9 +22,7 @@ const SceneText: React.FC = () => {
             sceneText.sceneTextContainer.alpha = visible ? 1 : 0;
         }
         if (!visible && text.hideEverything) {
-            if (modelContainer) {
-                modelContainer.alpha = visible ? 1 : 0;
-            }
+            modelContainer.alpha = visible ? 1 : 0;
             text.textContainer.alpha = visible ? 1 : 0;
         }
         setSceneText({
@@ -140,7 +138,10 @@ const SceneText: React.FC = () => {
                 <Checkbox
                     id="visible"
                     label={t("visible")}
-                    checked={sceneText.visible}
+                    checked={
+                        sceneText.visible ||
+                        sceneText.sceneTextContainer.alpha == 1
+                    }
                     onChange={handleSceneTextVisible}
                 />
                 {sceneText.visible && (

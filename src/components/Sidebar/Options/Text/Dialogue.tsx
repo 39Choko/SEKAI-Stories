@@ -184,7 +184,7 @@ const Dialogue: React.FC<DialogueProps> = ({
             <Checkbox
                 id="visible"
                 label={t("visible")}
-                checked={text.visible}
+                checked={text.visible || text.textContainer.alpha == 1}
                 onChange={handleDialogueBoxVisible}
             />
             {showFontSizeInput && (
