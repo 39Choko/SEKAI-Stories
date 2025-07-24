@@ -2,11 +2,12 @@ import React, { useContext, useState } from "react";
 import { SceneContext } from "../../contexts/SceneContext";
 import { IAnimationFrame, IAnimationTalk } from "../../types/IAnimationFrame";
 import Frames from "../Frames";
+import IModel from "../../types/IModel";
 
 const AnimationSidebar: React.FC = () => {
     const scene = useContext(SceneContext);
     const [selectedType, setSelectedType] = useState<string>("sceneText");
-    const [selectedFrame, setSelectedFrame] = useState<number>(0);
+    const [selectedFrame, setSelectedFrame] = useState<number>(-1);
 
     if (!scene) throw new Error("Context not found");
 
@@ -15,21 +16,19 @@ const AnimationSidebar: React.FC = () => {
         setAnimationFrames,
         background,
         text,
+        setText,
         sceneText,
+        setSceneText,
         models,
+        modelContainer,
+        setModels,
     } = scene;
 
+    if (!background || !text || !sceneText || !models || !modelContainer)
+        return;
     const handleAddFrame = () => {
         let data: IAnimationFrame | IAnimationTalk | null = null;
 
-        if (
-            !background ||
-            !text?.dialogue ||
-            !text?.nameTag ||
-            !sceneText?.textString ||
-            !models
-        )
-            return;
         switch (selectedType) {
             case "sceneText":
                 data = {
@@ -45,16 +44,20 @@ const AnimationSidebar: React.FC = () => {
                     data: {
                         nameTag: text.nameTagString,
                         dialogue: text.dialogueString,
-                        models: Object.entries(models).map(([key, e]) => ({
-                            key: key,
-                            x: e.modelX,
-                            y: e.modelY,
-                            scale: e.modelScale,
-                            rotation: e.modelRotation,
-                            pose: e.pose,
-                            expression: e.expression,
-                            opacity: e.model.alpha,
-                        })),
+                        models: Object.fromEntries(
+                            Object.entries(models).map(([key, e]) => [
+                                key,
+                                {
+                                    x: e.modelX,
+                                    y: e.modelY,
+                                    scale: e.modelScale,
+                                    rotation: e.modelRotation,
+                                    pose: e.pose,
+                                    expression: e.expression,
+                                    opacity: e.model.alpha,
+                                },
+                            ])
+                        ),
                     },
                 };
                 break;
@@ -63,16 +66,20 @@ const AnimationSidebar: React.FC = () => {
                     type: "Motion",
                     data: {
                         dialogueVisible: text.visible,
-                        models: Object.entries(models).map(([key, e]) => ({
-                            key: key,
-                            x: e.modelX,
-                            y: e.modelY,
-                            scale: e.modelScale,
-                            rotation: e.modelRotation,
-                            pose: e.pose,
-                            expression: e.expression,
-                            opacity: e.model.alpha,
-                        })),
+                        models: Object.fromEntries(
+                            Object.entries(models).map(([key, e]) => [
+                                key,
+                                {
+                                    x: e.modelX,
+                                    y: e.modelY,
+                                    scale: e.modelScale,
+                                    rotation: e.modelRotation,
+                                    pose: e.pose,
+                                    expression: e.expression,
+                                    opacity: e.model.alpha,
+                                },
+                            ])
+                        ),
                     },
                 };
                 break;
@@ -94,11 +101,80 @@ const AnimationSidebar: React.FC = () => {
     const handleSelectFrame = (index: number) => {
         setSelectedFrame(index);
         const frameData = animationFrames[index];
+        const { type, data } = frameData;
+        modelContainer.alpha = 1;
+        text.textContainer.alpha = 1;
+        sceneText.sceneTextContainer.alpha = 0;
 
-        switch (frameData.type) {
+        setSceneText({
+            ...sceneText,
+            visible: false,
+        });
+        setText({
+            ...text,
+            hideEverything: false,
+        });
+
+        switch (type) {
             case "SceneText":
-                if ("sceneText" in frameData.data)
-                    console.log(frameData.data.sceneText);
+                if ("sceneText" in data) {
+                    modelContainer.alpha = 0;
+                    text.textContainer.alpha = 0;
+                    sceneText.sceneTextContainer.alpha = 1;
+                    setSceneText({
+                        ...sceneText,
+                        visible: true,
+                    });
+                    setText({
+                        ...text,
+                        hideEverything: true,
+                    });
+                }
+                break;
+            case "Talk":
+                if ("nameTag" in data) {
+                    text.nameTag.text = data.nameTag;
+                    text.dialogue.text = data.dialogue;
+                    setText({
+                        ...text,
+                        hideEverything: false,
+                        dialogueString: data.dialogue,
+                        nameTagString: data.nameTag,
+                    });
+
+                    const listedModels: Record<string, IModel> = {};
+                    Object.entries(models).forEach(([key, m]) => {
+                        if (!(key in data.models)) {
+                            m.model.alpha = 0;
+                            listedModels[key] = {
+                                ...m,
+                                visible: false,
+                            };
+                            return;
+                        }
+                        listedModels[key] = {
+                            ...m,
+                            modelX: data.models[key].x,
+                            modelY: data.models[key].y,
+                            modelScale: data.models[key].scale,
+                            modelRotation: data.models[key].rotation,
+                            expression: data.models[key].expression,
+                            pose: data.models[key].pose,
+                            visible: data.models[key].opacity == 1,
+                        };
+                        m.model.position.set(
+                            data.models[key].x,
+                            data.models[key].y
+                        );
+                        m.model.scale.set(
+                            data.models[key].scale,
+                            data.models[key].scale
+                        );
+                        m.model.angle = data.models[key].rotation;
+                        m.model.alpha = data.models[key].opacity;
+                    });
+                    setModels(listedModels);
+                }
                 break;
         }
     };

@@ -1,34 +1,36 @@
-import IModel from "./IModel";
-
 export interface IAnimationSceneText {
     sceneText: string;
 }
 export interface IAnimationTalk {
     nameTag: string;
     dialogue: string;
-    models: {
-        key: string;
-        x: number;
-        y: number;
-        scale: number;
-        rotation: number;
-        pose: number;
-        expression: number;
-        opacity: number;
-    }[];
+    models: Record<
+        string,
+        {
+            x: number;
+            y: number;
+            scale: number;
+            rotation: number;
+            pose: number;
+            expression: number;
+            opacity: number;
+        }
+    >;
 }
 
 export interface IAnimationMotion {
     dialogueVisible: boolean;
-    models: {
-        key: string;
-        x: number;
-        y: number;
-        scale: number;
-        rotation: number;
-        pose: number;
-        expression: number;
-    }[];
+    models: Record<
+        string,
+        {
+            x: number;
+            y: number;
+            scale: number;
+            rotation: number;
+            pose: number;
+            expression: number;
+        }
+    >;
 }
 
 export interface IAnimationBackgroundChange {

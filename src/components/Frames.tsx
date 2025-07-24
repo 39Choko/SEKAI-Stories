@@ -31,10 +31,10 @@ const Frames: React.FC<FramesProps> = ({
                     <p>Dialogue: {data.dialogue}</p>
                     <p>
                         Models talking:{" "}
-                        {data.models
-                            .filter((m) => m.opacity != 0)
-                            .map((m) => (
-                                <span>{m.key} |</span>
+                        {Object.entries(data.models)
+                            .filter(([, m]) => m.opacity != 0)
+                            .map(([key]) => (
+                                <span>{key} |</span>
                             ))}
                     </p>
                 </>
