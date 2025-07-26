@@ -3,6 +3,7 @@ import { SceneContext } from "../../contexts/SceneContext";
 import { IAnimationFrame, IAnimationTalk } from "../../types/IAnimationFrame";
 import Frames from "../Frames";
 import IModel from "../../types/IModel";
+import { Live2DModel } from "pixi-live2d-display-mulmotion";
 
 const AnimationSidebar: React.FC = () => {
     const scene = useContext(SceneContext);
@@ -172,6 +173,30 @@ const AnimationSidebar: React.FC = () => {
                         );
                         m.model.angle = data.models[key].rotation;
                         m.model.alpha = data.models[key].opacity;
+
+                        if (m.model instanceof Live2DModel) {
+                            if (data.models[key].expression != 99999) {
+                                const manager =
+                                    m.model.internalModel
+                                        .parallelMotionManager[0];
+                                manager.startMotion(
+                                    "Expression",
+                                    data.models[key].expression
+                                );
+                            }
+                            if (
+                                data.models[key].pose &&
+                                data.models[key].pose !== 99999
+                            ) {
+                                const manager =
+                                    m.model.internalModel
+                                        .parallelMotionManager[1];
+                                manager.startMotion(
+                                    "Motion",
+                                    data.models[key].pose
+                                );
+                            }
+                        }
                     });
                     setModels(listedModels);
                 }

@@ -157,7 +157,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
         const visible = currentModel?.visible;
 
         if (currentModel?.model) {
-            currentModel.model.visible = !visible;
+            currentModel.model.alpha = !visible ? 1 : 0;
         }
         updateModelState({ visible: !visible });
     };
