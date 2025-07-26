@@ -216,9 +216,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
 
                 <button
                     className="btn-circle btn-white"
-                    onClick={() => {
-                        handleLive2DChange(handleHideLayer);
-                    }}
+                    onClick={handleHideLayer}
                     disabled={isLoading}
                 >
                     {!currentModel?.visible ? (
