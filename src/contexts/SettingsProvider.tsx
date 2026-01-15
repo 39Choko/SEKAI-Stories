@@ -11,7 +11,7 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
 }) => {
     const [openedSidebar, setOpenedSidebar] = useState<string>("text");
     const [hide, setHide] = useState<boolean>(false);
-    const [hideAnnouncements, setHideAnnouncements] = useState<boolean>(true);
+    const [showAnnouncement, setShowAnnouncements] = useState<boolean>(false);
     const [showTutorial, setShowTutorial] = useState<boolean>(false);
     const [showSaveDialog, setShowSaveDialog] = useState<boolean>(false);
     const [showMentalHealthWindow, setShowMentalHealthWindow] =
@@ -33,7 +33,7 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
     useEffect(() => {
         const announcementCookie = localStorage.getItem(announcementKey);
         if (Number(announcementCookie) < 1) {
-            setHideAnnouncements(false);
+            setShowAnnouncements(true);
         }
         const experimentalCookie = localStorage.getItem("showExperimental");
         if (experimentalCookie === "true") {
@@ -78,14 +78,13 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
         if (storedNameTagInputs) {
             setNameTagInputs(Number(storedNameTagInputs));
         }
-        
+
         setSettingsLoaded(true);
     }, []);
 
     useEffect(() => {
         localStorage.setItem("showTutorialAndSetup-v2", String(showTutorial));
     }, [showTutorial]);
-    
 
     return (
         <SettingsContext.Provider
@@ -94,8 +93,8 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
                 setOpenedSidebar,
                 hide,
                 setHide,
-                hideAnnouncements,
-                setHideAnnouncements,
+                showAnnouncements: showAnnouncement,
+                setShowAnnouncements: setShowAnnouncements,
                 showTutorial,
                 setShowTutorial,
                 blankCanvas,

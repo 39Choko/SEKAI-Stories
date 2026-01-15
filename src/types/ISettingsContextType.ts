@@ -6,8 +6,8 @@ export default interface ISettingsContextType {
     setOpenedSidebar: Dispatch<SetStateAction<string>>;
     hide: boolean;
     setHide: Dispatch<SetStateAction<boolean>>;
-    hideAnnouncements: boolean;
-    setHideAnnouncements: Dispatch<SetStateAction<boolean>>;
+    showAnnouncements: boolean;
+    setShowAnnouncements: Dispatch<SetStateAction<boolean>>;
     showTutorial: boolean;
     setShowTutorial: Dispatch<SetStateAction<boolean>>;
     blankCanvas: boolean;

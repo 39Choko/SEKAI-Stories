@@ -7,10 +7,10 @@ const Announcements: React.FC = () => {
 
     if (!context) return;
 
-    const { setHideAnnouncements } = context;
+    const { setShowAnnouncements } = context;
 
     const handleAnnouncements = () => {
-        setHideAnnouncements(true);
+        setShowAnnouncements(false);
         const cookie = localStorage.getItem(announcementKey);
         if (!cookie) {
             localStorage.setItem(announcementKey, "0");

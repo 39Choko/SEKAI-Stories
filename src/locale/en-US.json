@@ -264,7 +264,8 @@
         "show-tutorial": "Show one more time",
         "mentalHealthWindow": "Show mental health warning",
         "saveDialog": "Show save dialog",
-        "blankCanvas": "Start with a blank canvas"
+        "blankCanvas": "Start with a blank canvas",
+        "announcement": "Show announcement"
     },
     "import-export": {
         "header": "Import/Export",

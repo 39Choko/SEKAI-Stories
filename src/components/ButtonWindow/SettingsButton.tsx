@@ -43,6 +43,8 @@ const SettingsButton: React.FC = () => {
         setShowMentalHealthWindow,
         showSaveDialog,
         setShowSaveDialog,
+        showAnnouncements,
+        setShowAnnouncements,
         blankCanvas,
         setBlankCanvas,
         setShowTutorial,
@@ -98,7 +100,9 @@ const SettingsButton: React.FC = () => {
         localStorage.setItem("mentalHealthWindow", String(value));
         setShowMentalHealthWindow(value);
     };
+    const handleAnnouncement = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.checked;
+        setShowAnnouncements(value);
     };
 
     return (
@@ -199,7 +203,12 @@ const SettingsButton: React.FC = () => {
                                 />
                             )}
                             <Checkbox
+                                id="announcement"
+                                label={t("settings.announcement")}
+                                checked={showAnnouncements}
+                                onChange={handleAnnouncement}
                             />
+                            
                         </div>
                         <div
                             className="window__divider center flex flex-vertical"

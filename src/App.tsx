@@ -13,7 +13,11 @@ function App() {
     if (!settings) {
         throw new Error("Context is not loaded properly.");
     }
-    const { hide, hideAnnouncements, allowRefresh } = settings;
+    const {
+        hide,
+        showAnnouncements,
+        allowRefresh,
+    } = settings;
 
     const { i18n } = useTranslation();
     const lang = i18n.language;
@@ -57,7 +61,7 @@ function App() {
         <main className={`app-${lang}`} id="app">
             <Content />
             {!hide && <Sidebar />}
-            {!hideAnnouncements && <Announcements />}
+            {showAnnouncements && <Announcements />}
             <Loading />
         </main>
     );
