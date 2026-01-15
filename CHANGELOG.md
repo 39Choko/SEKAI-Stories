@@ -1,3 +1,8 @@
+# 5.9.4
+Release date: January 15, 2026
+- Added setting for re-showing the notice announcement
+- Fixed enter-value locale translation
+
 # 5.9.3
 Release date: January 10, 2026
 - Fixed issue regarding on missing parts on certain characters
