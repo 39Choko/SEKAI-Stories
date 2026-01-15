@@ -36,12 +36,9 @@ const SettingsButton: React.FC = () => {
         throw new Error("Context not provided.");
     }
 
-    const { guideline, setGuideline } = scene;
     const {
         openAll,
         setOpenAll,
-        showExperimental,
-        setShowExperimental,
         showMentalHealthWindow,
         setShowMentalHealthWindow,
         showSaveDialog,
@@ -73,36 +70,7 @@ const SettingsButton: React.FC = () => {
         a.remove();
     };
 
-    const handleGuideline = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.checked;
-        if (guideline) {
-            guideline.container.visible = value;
-            setGuideline({
-                ...guideline,
-                visible: value,
-            });
-        }
-    };
 
-    const handleExperimental = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.checked;
-        if (
-            value &&
-            !confirm(
-                "This is only used for testing and other experimental features. Continue?"
-            )
-        ) {
-            return;
-        }
-        localStorage.setItem("showExperimental", String(value));
-        setShowExperimental(value);
-    };
-
-    const handleExpand = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.checked;
-        localStorage.setItem("openAll", String(value));
-        setOpenAll(value);
-    };
     const handleAudio = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.checked;
         localStorage.setItem("audio", String(value));
@@ -113,6 +81,16 @@ const SettingsButton: React.FC = () => {
         localStorage.setItem("saveDialog", String(value));
         setShowSaveDialog(value);
     };
+    const handleBlankCanvas = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.checked;
+        localStorage.setItem("blankCanvas", String(value));
+        setBlankCanvas(value);
+    };
+    const handleExpand = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.checked;
+        localStorage.setItem("openAll", String(value));
+        setOpenAll(value);
+    };
     const handleMentalHealthWindow = (
         e: React.ChangeEvent<HTMLInputElement>
     ) => {
@@ -120,10 +98,7 @@ const SettingsButton: React.FC = () => {
         localStorage.setItem("mentalHealthWindow", String(value));
         setShowMentalHealthWindow(value);
     };
-    const handleBlankCanvas = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.checked;
-        localStorage.setItem("blankCanvas", String(value));
-        setBlankCanvas(value);
     };
 
     return (
@@ -224,16 +199,6 @@ const SettingsButton: React.FC = () => {
                                 />
                             )}
                             <Checkbox
-                                id="guideline"
-                                label={t("settings.guidelines")}
-                                checked={guideline?.visible}
-                                onChange={handleGuideline}
-                            />
-                            <Checkbox
-                                id="experimental"
-                                label={t("settings.experimental")}
-                                checked={showExperimental}
-                                onChange={handleExperimental}
                             />
                         </div>
                         <div
