@@ -12,7 +12,7 @@ interface WindowProps {
 const InputWindow: React.FC<WindowProps> = ({
     show,
     confirmFunction,
-    description = t("enter-value"),
+    description = t("global.enter-value"),
     confirmLabel = "OK",
     className = "",
 }) => {
