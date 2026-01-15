@@ -164,7 +164,18 @@ const randomInitialScene: Record<string, InitialScene[]> = {
             sceneText: "Emu's Room",
         },
     ],
-    anniversary: [],
+    anniversary: [
+        {
+            background: "/background_special/Background_Uranohoshi.png",
+            text: "No, I will not do Ai♡Scream for you.",
+            nameTag: "Airi",
+            modelX: 960,
+            modelY: 625,
+            modelScale: 1,
+            pngName: "airi",
+            sceneText: "Uranohoshi High School Club Room",
+        },
+    ],
     "727": [
         {
             background: "/background_special/Background_BlueZenith.jpg",
@@ -222,13 +233,13 @@ const CheckDate = (blank: boolean): string => {
 
     if (month in months) return months[month];
 
-    // const range: Array<[number, number, number, string]> = [
-    //     [4, 10, 30, "anniversary"],
-    // ];
+    const range: Array<[number, number, number, string]> = [
+        [4, 10, 30, "anniversary"],
+    ];
 
-    // for (const [m, start, end, value] of range) {
-    //     if (month === m && day >= start && day <= end) return value;
-    // }
+    for (const [m, start, end, value] of range) {
+        if (month === m && day >= start && day <= end) return value;
+    }
 
     const exact: Record<string, string> = {
         "7-27": "727",
