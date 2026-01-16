@@ -1,18 +1,18 @@
 {
     "global": {
-        "toggles": null,
+        "toggles": "Opcje",
         "close": "Zamknij",
         "clear-ok": "Wyczyść",
-        "copy": null,
-        "continue-ok": null,
-        "cancel": null,
-        "next": null,
-        "input": null,
-        "adjust": null,
-        "enter-value": null,
+        "copy": "Kopiuj",
+        "continue-ok": "Kontynuuj",
+        "cancel": "Anuluj",
+        "next": "Dalej",
+        "input": "Wprowadź",
+        "adjust": "Skoryguj",
+        "enter-value": "Podaj wartość",
         "visible": "Widoczna",
-        "import": null,
-        "export": null
+        "import": "Importuj",
+        "export": "Eksportuj"
     },
     "background": {
         "header": "Tło",
@@ -23,35 +23,35 @@
             "upload": "Załaduj",
             "upload-info": "Aby się upewnić, że obraz będzie wyglądał dobrze i się nie rozciągnie lub przytnie, użyj obrazka o proporcjach 16:9."
         },
-        "lighting": {
-            "header": null,
-            "preset": null,
-            "red": null,
-            "green": null,
-            "blue": null,
-            "brightness": null,
-            "saturation": null,
+         "lighting": {
+            "header": "Oświetlenie",
+            "preset": "Preset",
+            "red": "Czerwony",
+            "green": "Zielony",
+            "blue": "Niebieski",
+            "brightness": "Jasność",
+            "saturation": "Nasycenie",
             "presets": {
-                "select-preset": null,
-                "default": null,
-                "warm": null,
-                "night": null,
-                "off": null,
-                "bright": null,
-                "silhoutte": null,
-                "custom-preset": null
+                "select-preset": "Wybierz preset",
+                "default": "Domyślny",
+                "warm": "Ciepłe",
+                "night": "Noc",
+                "off": "Światła wyłączone",
+                "bright": "Jasne",
+                "silhoutte": "Sylwetka",
+                "custom-preset": "Własny preset"
             }
         },
         "filters": {
-            "header": null,
-            "flashback": null,
-            "sick": null,
-            "drooping-lines": null,
-            "pov": null,
+            "header": "Filtry",
+            "flashback": "Retrospekcja",
+            "sick": "Choroba",
+            "drooping-lines": "Opadające linie",
+            "pov": "Perspektywa (POV/FOV)",
             "pov-settings": {
-                "zoom": null,
-                "povx": null,
-                "povy": null
+                "zoom": "Przybliżenie",
+                "povx": "Pozycja X",
+                "povy": "Pozycja Y"
             }
         }
     },
@@ -64,21 +64,21 @@
         "dialogue": {
             "header": "Dialog",
             "font-size": "Rozmiar czcionki",
-            "enter-font-size": null,
+            "enter-font-size": "Rozmiar czcionki",
             "add-symbol": "Wstaw symbol"
         },
         "scene-text": {
-            "header": null,
+            "header": "Tekst Sceny",
             "variant": {
-                "header": null,
-                "middle": null,
-                "top-left": null
+                "header": "Wariant",
+                "middle": "Środek",
+                "top-left": "Górny lewy róg"
             },
-            "hide-everything": null
+            "hide-everything": "Ukryj modele i dialogi"
         },
         "y-offset": {
-            "header": null,
-            "details": null
+            "header": "Przesunięcie Y",
+            "details": "Jeżeli tekst nie jest ułożony dokładnie, możesz go przesunąć tutaj."
         },
         "toggles": null
     },
@@ -94,8 +94,8 @@
                 "sekai-description": "Użyj modeli dostarczonych przez Sekai Viewer!",
                 "static": "Dodaj model z SEKAI Stories",
                 "static-description": "Alternatywna opcja gdyby Sekai Viewer nie działał.",
-                "upload-image": null,
-                "upload-image-description": null
+                "upload-image": "Prześlij zdjęcie",
+                "upload-image-description": "Wybierz własne zdjęcie z urządzenia."
             },
             "delete-model-warn": "To jest jedyna warstwa i nie może zostać usunięta."
         },
@@ -107,11 +107,11 @@
             "header": "Strój",
             "live2d-issue": null,
             "live2d-issue-github": null,
-            "virtual": null
+            "virtual": "Efekt hologramu"
         },
         "emotion": {
             "header": "Emocje",
-            "rename-emotion": null,
+            "rename-emotion": "Nadaj ładną nazwę tej emocji, lub pozostaw puste aby zresetować.",
             "pose": "Poza",
             "select-pose": "Wybierz pozę",
             "expression": "Wyraz twarzy",
@@ -122,19 +122,19 @@
             "x-position": "Pozycja X",
             "y-position": "Pozycja Y",
             "scale": "Skala",
-            "rotation": null,
-            "blur": null,
-            "layering": null
+            "rotation": "Obrót",
+            "blur": "Rozmycie",
+            "layering": "Kolejność warstw"
         },
         "mouth": {
-            "header": null,
-            "ParamMouthForm": null,
-            "ParamMouthOpenY": null,
-            "ParamMouthForm2": null,
-            "ParamMouthScaleX": null,
-            "ParamMouthScaleY": null,
-            "ParamMouthPositionY": null,
-            "ParamMouthShadow": null
+            "header": "Usta",
+            "ParamMouthForm": "Główny kształt",
+            "ParamMouthOpenY": "Otwarcie",
+            "ParamMouthForm2": "Drugorzędny kształt",
+            "ParamMouthScaleX": "Skala X",
+            "ParamMouthScaleY": "Skala Y",
+            "ParamMouthPositionY": "Pozycja Y",
+            "ParamMouthShadow": "Cień"
         },
         "live2d": {
             "header": null,
@@ -157,8 +157,8 @@
             "show-live2d-parts": null,
             "access-live2d-parts": null
         },
-        "live2d-changed-warn": null,
-        "long-wait": null,
+        "live2d-changed-warn": "Wprowadziłeś własne parametry Live2D. Zostaną one usunięte przy kontynuacji!",
+        "long-wait": "Jeżeli wczytywanie modelu zajmuje za długo, rozważ wybranie modelu z SEKAI Stories.",
         "re-apply": "Zastosuj ponownie",
         "advanced": null
     },
@@ -173,6 +173,9 @@
     },
     "support": {
         "header": "Wsparcie",
+		"report-header": "Znalazłeś błąd?",
+        "report-details": "Prosimy o zgłaszanie spotkanych błędów i problemów na naszym repozytorium GitHub.",
+        "report-button": "Zgłoś problem",
         "details": "Jeśli podoba ci się SEKAI Stories, możesz mnie wesprzeć na poniższe sposoby:",
         "ko-fi-details": "Donacje są opcjonalne! Będę tam również tworzyć posty o aktualizacjach strony.",
         "github-details": "Ten projekt jest w pełni open-source! Możesz zgłaszać problemy lub otwierać pull requesty!",
@@ -221,17 +224,120 @@
         "kaito": "KAITO",
         "others": "Inni"
     },
-    "group": {},
+	
+    "group": {
+        "all": "Wszystkie",
+        "bookmarks": "Polubione",
+        "general": "Ogólne",
+        "mmj": "MORE MORE JUMP!",
+        "vbs": "Vivid BAD SQUAD",
+        "wxs": "Wonderlands x Showtime",
+        "n25": "Nightcord at 25:00",
+        "ln": "Leo/need",
+        "vs": "VIRTUAL SINGER",
+        "split": "Podzielone Lokacje",
+        "temp": "Inne",
+        "cards": "Karty"
+    },
+	
     "settings": {
         "header": "Ustawienia",
-        "language": "Język"
+        "language": "Język",
+		"auto-save": "Autozapis",
+        "auto-save-description": "Twoja praca zapisuje się automatycznie co 3 minuty. Jeżeli coś pójdzie nie tak, możesz pobrać najnowszą kopię zapasową jako plik SEKAISCENE.",
+        "auto-save-button": "Pobierz najnowszą kopię",
+        "toggles": "Opcje",
+        "audio": "Dźwięk włączony",
+        "guidelines": "Pokaż linie siatki",
+        "experimental": "Włącz funkcje eksperymentalne",
+        "expand": "Rozwiń wszystkie opcje menu",
+        "tutorial": "Samouczek",
+        "show-tutorial": "Pokaż samouczek ponownie",
+        "mentalHealthWindow": "Wyświetl ostrzeżenie o zdrowiu psychicznym",
+        "saveDialog": "Wyświetl okno zapisu",
+        "blankCanvas": "Puste płótno na start"
     },
+	
     "import-export": {
-        "header": null,
-        "description": null
+        "header": "Import/Eksport",
+        "description": "Własne tła i obrazy nie są dołączone do tego pliku SEKAISCENE."
     },
-    "save": {},
-    "error": {},
+    "save": {
+        "header": "Zapisz",
+        "note-1-desktop": "Jeżeli pobieranie się nie rozpoczęło, kliknij prawym przyciskiem na zdjęcie i je zapisz.",
+        "note-1-phone": "Jeżeli pobieranie się nie rozpoczęło, przytrzymaj zdjęcie poniżej i je zapisz.",
+        "note-2": "Możesz wyłączyć to okno w ustawieniach.",
+        "disable-dialog": "Nie pokazuj ponownie."
+    },
+    "error": {
+        "header": "Błąd",
+        "import-scene-fail": "Zresetowano płótno.",
+        "invalid-json": "Uszkodzona struktura JSON",
+        "no-autosave": "Brak danych autozapisu.",
+        "no-valid-models": "Najpierw dodaj model postaci Live2D.",
+        "not-an-image": "To nie jest obraz.",
+        "default-scene-fail": "Wystąpił błąd przy wczytywaniu domyślnej sceny.\nWciśnij przycisk wyczyść, odśwież swoją przeglądarkę, lub wyczyść pliki cookies.\nJeżeli problem nadal występuje, zgłoś go na GitHub.",
+        "name-tag-inputs-limit": "Limit pola na imię to od 2 do 6 wpisów.",
+        "background-bookmark": "Nie możesz polubić przesłanego tła.",
+        "hide-everything-warning": "Opcja \"Ukryj modele i dialogi\" pod tesktem sceny jest włączona.\nWyłącz ją w menu tekstu."
+    },
     "mental-health": {},
-    "tutorial": {}
+    "tutorial": {
+        "initialSetup1": "Przesuń suwak do momentu, w którym nie widać czerwonego.",
+        "initialSetup2": "Zawsze możesz to potem zmienić w menu tekstu.",
+        "welcomeHeader": "Witaj w SEKAI Stories!",
+        "welcomeIntroHeader": "Ten samouczek wytłumaczy Ci, jak korzystać z tej strony.",
+        "welcomeIntroParagraph1": "Jeżeli już umiesz korzystać z SEKAI Stories, możesz zamknąć to okno.",
+        "welcomeIntroParagraph2": "Spokojnie! Zawsze możesz otworzyć ten poradnik ponownie przez przycisk w ustawieniach.",
+        "confirmFirstTime": "Rozpocznij samouczek",
+        "menuNavigationHeader": "Te przyciski pozwalają nawigować po menu!",
+        "backgroundMenuHeader": "Menu Tła",
+        "selectUploadHeader": "Wybierz lub prześlij swoje",
+        "selectUploadParagraph": "Wybierz tło z Project SEKAI lub prześlij swoje własne.",
+        "splitLocationHeader": "Podzielone Tła",
+        "splitLocationParagraph": "Możesz także użyć podzielonych lokacji, które składają się z dwóch teł.",
+        "textMenuHeader": "Menu Tekstu",
+        "nameTagHeader": "Pole na imię",
+        "nameTagParagraph": "Tutaj możesz wpisać dowolne imię dla postaci.",
+        "easySwitchHeader": "Łatwe przełączanie",
+        "easySwitchParagraph": "Możesz dodać kilka imion postaci i zmieniać je szybciej, bez potrzeby ponownego wpisywania.",
+        "dialogueHeader": "Dialog",
+        "dialogueParagraph": "Wpisz tutaj tekst który ma wymówić postać.",
+        "sceneTextHeader": "Tekst Sceny",
+        "sceneTextParagraph": "Czas i miejsce akcji Twojej sceny. Zazwyczaj widziany na początku każdej opowieści w PJSK.",
+        "modelMenuHeader": "Menu Modeli",
+        "selectedLayerHeader": "Wybrana warstwa",
+        "selectedLayerParagraph": "Wszystkie dostępne do wyboru modele widoczne w Twojej scenie są tutaj.",
+        "addModelHeader": "Dodaj Model",
+        "addModelParagraph": "Możesz dodać model Live2D postaci lub przesłać swój własny obrazek.",
+        "uploadSpriteHeader": "Prześlij obraz PNG",
+        "uploadSpriteParagraph": "Kliknij aby wybrać obrazek PNG z Twojego komputera.",
+        "hideLayerHeader": "Widoczność",
+        "hideLayerParagraph": "Pokaż lub ukryj wybraną postać.",
+        "removeLayerHeader": "Usuń warstwę",
+        "removeLayerParagraph": "Usuwa wybraną warstwę.",
+        "transformHeader": "Transformacje",
+        "transformParagraph": "Ta opcja pozwala ci przemieszczać, zmieniać rozmiar i ukryć wybraną warstwę.",
+        "characterHeader": "Postać",
+        "characterParagraph": "Jeżeli korzystasz z modelu Live2D, możesz wybrać postacie z PJSK.",
+        "costumeHeader": "Kostiumy",
+        "costumeParagraph": "Po wyborze postaci, możesz wybrać jej kostium z listy.",
+        "emotionHeader": "Emocje",
+        "poseHeader": "Poza",
+        "poseParagraph": "Zmienia pozę wybranej postaci.",
+        "expressionHeader": "Wyraz twarzy",
+        "expressionParagraph": "Wybierz wyraz twarzy wybranej postaci.",
+        "mouthHeader": "Usta",
+        "mouthParagraph": "Pozwala zmienić kształt ust modelu Live2D.",
+        "live2dHeader": "Live2D",
+        "live2dParagraph": "Możesz wybrać własne pozy używając parametrów Live2D oraz zapauzować animację bezczynności.",
+        "importExportHeader": "Import/Eksport",
+        "importExportParagraph": "Możesz także pobrać swoje ustawienia parametrów Live2D oraz przesłać je ponownie do innego modelu.",
+        "emotionCopyHeader": "Kopiuj Emocję",
+        "emotionCopyParagraph": "Kopiuje pozę i wyraz twarzy modelu Live2D.",
+        "saveHeader": "Na koniec, zapisz swoją pracę!",
+        "sceneImportExportParagraph": "Pozwoli ci na pobranie swojej sceny jako format, który możesz później dowolnie edytować.",
+        "endHeader": "To wszystko!",
+        "endParagraph": "Jeżeli jesteś niepewny i chcesz powtórzyć samouczek, wybierz opcję \"Pokaż samouczek\" w ustawieniach."
+    }
 }
