@@ -108,14 +108,17 @@
     flex-wrap: wrap;
     @media (width <= 768px) {
         flex-direction: column;
+        padding: 10px;
+        button {
+            width: 100%;
+        }
     }
     @media (width > 768px) {
         flex-direction: row;
+        gap: 16px;
     }
 
-    button {
-        margin: 10px;
-    }
+    
 }
 
 .window__divider {
