@@ -31,20 +31,20 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
     const [settingsLoaded, setSettingsLoaded] = useState<boolean>(false);
 
     useEffect(() => {
+        const showExperimental =
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1";
+        setShowExperimental(showExperimental);
         const announcementCookie = localStorage.getItem(announcementKey);
         if (Number(announcementCookie) < 1) {
             setShowAnnouncements(true);
-        }
-        const experimentalCookie = localStorage.getItem("showExperimental");
-        if (experimentalCookie === "true") {
-            setShowExperimental(true);
         }
         const openAllCookie = localStorage.getItem("openAll");
         if (openAllCookie === "true") {
             setOpenAll(true);
         }
         const showTutorialCookie = localStorage.getItem(
-            "showTutorialAndSetup-v2"
+            "showTutorialAndSetup-v2",
         );
         if (!showTutorialCookie || showTutorialCookie === "true") {
             setShowTutorial(true);

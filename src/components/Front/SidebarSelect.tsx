@@ -6,7 +6,7 @@ const SidebarSelect: React.FC = () => {
 
     if (!settings) return;
 
-    const { openedSidebar, setOpenedSidebar } = settings;
+    const { openedSidebar, setOpenedSidebar, showExperimental } = settings;
 
     return (
         <div className="absolute flex-vertical" id="sidebar-select">
@@ -40,6 +40,20 @@ const SidebarSelect: React.FC = () => {
             >
                 <i className="sidebar__select bi bi-person-fill"></i>
             </button>
+            {showExperimental && (
+                <button
+                    onClick={() => {
+                        setOpenedSidebar("experimental");
+                    }}
+                    className={`btn-circle ${
+                        openedSidebar == "experimental"
+                            ? "btn-orange"
+                            : "btn-white"
+                    }`}
+                >
+                    <i className="sidebar__select bi bi-flask-fill"></i>
+                </button>
+            )}
         </div>
     );
 };

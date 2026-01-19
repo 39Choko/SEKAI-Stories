@@ -5,7 +5,7 @@ import { SoftErrorContext } from "../../contexts/SoftErrorContext";
 import { SettingsContext } from "../../contexts/SettingsContext";
 
 const Experimental: React.FC = () => {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const scene = useContext(SceneContext);
     const settings = useContext(SettingsContext);
     const softError = useContext(SoftErrorContext);
@@ -15,10 +15,12 @@ const Experimental: React.FC = () => {
     const { loading, setLoading } = settings;
 
     return (
-        <div className="option">
-            <h1>{t("experimental.header")}</h1>
-            <p>This experimental section is only used for testing.</p>
-            <p>You can disable this on Settings.</p>
+        <div>
+            <h1>Experimental</h1>
+            <p>
+                This experimental section is only used for testing and other new
+                features.
+            </p>
 
             <div className="option">
                 <h2>Language</h2>
@@ -32,7 +34,7 @@ const Experimental: React.FC = () => {
                                 <option key={lng} value={lng}>
                                     {lng}
                                 </option>
-                            )
+                            ),
                         )}
                     </select>
                 </div>
@@ -63,7 +65,7 @@ const Experimental: React.FC = () => {
                                 "Room disbanded. (103)",
                             ];
                             setErrorInformation(
-                                msg[Math.floor(Math.random() * msg.length)]
+                                msg[Math.floor(Math.random() * msg.length)],
                             );
                         }}
                     >
