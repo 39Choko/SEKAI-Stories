@@ -28,13 +28,17 @@ const Loading: React.FC = () => {
                 style={{
                     backgroundImage: "url(/img/miku.svg)",
                 }}
-                className="loading-container"
+                className={
+                    loading >= 80 && loading <= 99
+                        ? "loading-container dance"
+                        : "loading-container"
+                }
             >
                 <img
                     src="/img/miku-filled.svg"
                     className="loading-fill"
                     style={{
-                        clipPath: `inset(${100 - loading}% 0 0 0)`,
+                        clipPath: `inset(${90 - loading}% 0 0 0)`,
                     }}
                 />
             </div>

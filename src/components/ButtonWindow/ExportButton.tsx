@@ -204,7 +204,7 @@ const ExportButton: React.FC = () => {
                 (x) => {
                     const totalSteps = modelJson.length * 5;
                     const currentStep = idx * 5 + x;
-                    return 20 + (60 / (totalSteps - 1)) * currentStep;
+                    return 20 + (70 / (totalSteps - 1)) * currentStep;
                 }
             );
 
@@ -287,7 +287,7 @@ const ExportButton: React.FC = () => {
             };
         }
 
-        setLoading(80);
+        setLoading(90);
         background?.backgroundContainer.removeChildAt(0);
         background?.backgroundContainer.addChildAt(backgroundSprite, 0);
         if (background?.backgroundContainer) {
