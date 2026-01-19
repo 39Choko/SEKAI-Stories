@@ -92,7 +92,7 @@ export function ErrorFallback({ error }: { error: Error }) {
                         An unexpected error has occurred.
                     </p>
 
-                    {!showExperimental ? (
+                    {showExperimental ? (
                         <p className="text-center">
                             Did you somehow forget a variable?
                         </p>
