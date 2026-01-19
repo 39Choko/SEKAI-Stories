@@ -31,7 +31,7 @@ const Window: React.FC<WindowProps> = ({
     useEffect(() => {
         playSound("/sound/open.wav");
         const handleKey = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
+            if (e.key === "Escape" && !hideClose) {
                 handleClose();
             }
             if (e.key === "Enter" && confirmFunction) {

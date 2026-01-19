@@ -28,7 +28,8 @@
     }
 }
 
-#export-screen {
+#export-screen,
+#error-screen {
     .window {
         width: 90dvw;
         min-height: 80dvh;
@@ -53,7 +54,7 @@
     }
     .width-100 {
         width: 100%;
-        max-width: 100%
+        max-width: 100%;
     }
     animation: open_window 0.05s linear;
 }

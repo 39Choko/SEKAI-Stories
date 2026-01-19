@@ -607,13 +607,21 @@ select:disabled {
 }
 
 #error-img {
-  height: 20dvh;
+  height: 15dvh;
+  object-fit: contain;
 }
 
 #error-traceback {
-  height: 80%;
+  flex: 1;
+  width: 100%;
   font-size: 1em;
   font-family: monospace;
+  margin-top: 10px;
+}
+@media (width <= 768px) {
+  #error-traceback {
+    min-height: 300px;
+  }
 }
 
 .padding-top-bottom-10 {
@@ -970,7 +978,8 @@ select:disabled {
   padding-bottom: 5px;
 }
 
-#export-screen .window {
+#export-screen .window,
+#error-screen .window {
   width: 90dvw;
   min-height: 80dvh;
   max-width: 768px;
@@ -1048,15 +1057,17 @@ select:disabled {
 @media (width <= 768px) {
   .window__buttons {
     flex-direction: column;
+    padding: 10px;
+  }
+  .window__buttons button {
+    width: 100%;
   }
 }
 @media (width > 768px) {
   .window__buttons {
     flex-direction: row;
+    gap: 16px;
   }
-}
-.window__buttons button {
-  margin: 10px;
 }
 
 .window__divider {
