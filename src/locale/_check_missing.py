@@ -14,8 +14,8 @@ def load_keys(json_data, parent_key=""):
     return keys
 
 
-def main(filename: str):
-    if filename.lower().endswith(".json"):
+def main(locale: str):
+    if locale.lower().endswith(".json"):
         print("You don't need the .json extension, darling.")
         return
 
@@ -25,34 +25,35 @@ def main(filename: str):
 
     en_keys = load_keys(en_data)
 
-    locale = f"./{filename}.json"
+    file = f"./{locale}.json"
 
-    with open(locale, "r", encoding="utf-8") as f:
+    with open(file, "r", encoding="utf-8") as f:
         locale_data = json.load(f)
 
     locale_keys = load_keys(locale_data)
 
-    missing_keys = set(en_keys) - set(locale_keys) - {"character.blank"}
+    missing_keys = set(en_keys) - set(locale_keys)
     if missing_keys:
-        print(f"Missing keys in {locale}:")
+        print(f"Missing keys in {file}:")
         for key in sorted(missing_keys):
             print(f"  {key}")
     else:
-        print(f"All keys are present in {locale}.")
+        print(f"All keys are present in {file}.")
+
+    print(f"{((len(en_keys) - len(missing_keys)) / len(en_keys) * 100):.2f}% complete")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check locale JSON file for missing.")
     parser.add_argument(
-        "--filename",
+        "--locale",
         type=str,
-        help="file name of the locale JSON file",
         required=True,
     )
 
     args = parser.parse_args()
-    input_filename = args.filename
-    if not input_filename:
-        print("Please provide the input filename using --filename")
+    input_locale = args.locale
+    if not input_locale:
+        print("Please provide the input locale using --locale")
         exit(1)
-    main(input_filename)
+    main(input_locale)
