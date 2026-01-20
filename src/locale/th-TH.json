@@ -195,7 +195,6 @@
     },
     "character": {
         "none": "ไม่มี",
-        "blank": "",
         "custom": "กำหนดเอง",
         "ichika": "Ichika",
         "saki": "Saki",
@@ -254,7 +253,8 @@
         "show-tutorial": "แสดงอีกครั้ง",
         "mental-health-window": "แสดงคำเตือนเกี่ยวกับสุขภาพจิต",
         "save-dialog": "แสดงบทสนทนาที่บันทึกไว้",
-        "blank-canvas": "เริ่มต้นด้วยแคนวาสว่าง"
+        "blank-canvas": "เริ่มต้นด้วยแคนวาสว่าง",
+        "announcement": "แสดงคำประกาศ"
     },
     "import-export": {
         "header": "นำเข้า/ส่งออก",
