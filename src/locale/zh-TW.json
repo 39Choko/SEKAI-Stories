@@ -247,8 +247,8 @@
         "expand": "自動展開所有選單選項",
         "tutorial": "教程",
         "show-tutorial": "再次顯示",
-        "saveDialog": "顯示儲存選單",
-        "blankCanvas": "從空白開始"
+        "save-dialog": "顯示儲存選單",
+        "blank-canvas": "從空白開始"
     },
     "import-export": {
         "header": "匯入/匯出",
@@ -275,61 +275,119 @@
     },
     "mental-health": {},
     "tutorial": {
-        "initialSetup1": "調整位置，直到你看不到任何紅色的地方",
-        "initialSetup2": "你之後可以在文字選單上把文字改回原來的位置",
-        "welcomeHeader": "歡迎來到《世界計劃》故事生成器!",
-        "welcomeIntroHeader": "這個超級無敵、特別好用、的教程會教會你怎樣使用這個網站",
-        "welcomeIntroParagraph1": "如果你已經用過了，那麼你就可以直接關閉這個教程了",
-        "welcomeIntroParagraph2": "不必擔心之後會找不到這個教程，你之後可以隨時再設定裡再次開啟這個教程",
-        "confirmFirstTime": "我第一次使用這個網站",
-        "menuNavigationHeader": "這些會幫助不在選單和選單中間迷路",
-        "backgroundMenuHeader": "背景選單",
-        "selectUploadHeader": "選擇並上傳",
-        "selectUploadParagraph": "選擇世界計劃中的背景，或上傳你自己的背景",
-        "splitLocationHeader": "拆分位置",
-        "splitLocationParagraph": "你也可以使用「拆分位置」，在一個專案中顯示兩個不同的背景",
-        "textMenuHeader": "文字選單",
-        "nameTagHeader": "名稱標籤",
-        "nameTagParagraph": "這是你設定角色名稱的地方",
-        "easySwitchHeader": "快捷切換",
-        "easySwitchParagraph": "你可以使用「快速切換」在兩個（或多個）名稱之間快速切換，並且不需要自己輸入",
-        "dialogueHeader": "對話",
-        "dialogueParagraph": "你可以在這裡輸入角色之間的對話",
-        "sceneTextHeader": "場景名稱",
-        "sceneTextParagraph": "你故事的場景和時間應該在故事的開頭顯示",
-        "modelMenuHeader": "模型和動作選單",
-        "selectedLayerHeader": "所選擇的圖層",
-        "selectedLayerParagraph": "你的專案上顯示的所有模型都在這裡，你可以選擇並進行一些調整",
-        "addModelHeader": "新增模型",
-        "addModelParagraph": "你可以在這裡新增你自己的Live2D模型及上傳你自己的圖片",
-        "uploadSpriteHeader": "上傳PNG動作",
-        "uploadSpriteParagraph": "上傳你自己的PNG動作",
-        "hideLayerHeader": "隱藏圖層",
-        "hideLayerParagraph": "切換圖層的可見性。",
-        "removeLayerHeader": "刪除圖層",
-        "removeLayerParagraph": "刪除你所選擇的圖層。",
-        "transformHeader": "調整",
-        "transformParagraph": "你可以在這裡移動、更改大小或是隱藏你所選擇的圖層",
-        "characterHeader": "角色",
-        "characterParagraph": "如果所選擇的模型是Live2D，那麼你可以從「世界計劃角色集」裡面選擇角色",
-        "costumeHeader": "服裝",
-        "costumeParagraph": "選擇完角色後，你可以選擇你自己喜歡的服裝",
-        "emotionHeader": "表情",
-        "poseHeader": "動作",
-        "poseParagraph": "更改你所選擇的角色的姿勢",
-        "expressionHeader": "表情",
-        "expressionParagraph": "更改你所選擇的角色的面部表情",
-        "mouthHeader": "嘴部",
-        "mouthParagraph": "你可以在這裡更改和調整Live2D模型口部的張開大小和形狀",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "你可以透過調整Live2D的參數來自定義角色的姿勢和空閒動畫",
-        "importExportHeader": "匯入/匯出",
-        "importExportParagraph": "你可以儲存對這個模型所做的調整，並把這些調整載入到其他的模型上",
-        "emotionCopyHeader": "複製表情",
-        "emotionCopyParagraph": "複製你給這個角色設定的表情和姿勢的Live2D參數，有這麼方便的功能真是泰褲辣！",
-        "saveHeader": "完成後，記得儲存你的專案！不要怪我沒提醒過你",
-        "sceneImportExportParagraph": "這個功能可以讓你把整個專案儲存為可編輯的格式，然後在下一次開啟時重新載入",
-        "endHeader": "就是這樣！",
-        "endParagraph": "如果你想繼續編輯這個專案，你可以在設定裡重新載入它們"
+        "initial-setup": {
+            "paragraph-1": "調整位置，直到你看不到任何紅色的地方",
+            "paragraph-2": "你之後可以在文字選單上把文字改回原來的位置"
+        },
+        "welcome": {
+            "header": "歡迎來到《世界計劃》故事生成器!",
+            "intro-header": "這個超級無敵、特別好用、的教程會教會你怎樣使用這個網站",
+            "paragraph-1": "如果你已經用過了，那麼你就可以直接關閉這個教程了",
+            "paragraph-2": "不必擔心之後會找不到這個教程，你之後可以隨時再設定裡再次開啟這個教程",
+            "confirm-first-time": "我第一次使用這個網站"
+        },
+        "menu-navigation": {
+            "header": "這些會幫助不在選單和選單中間迷路"
+        },
+        "background-menu": {
+            "header": "背景選單",
+            "select-upload": {
+                "header": "選擇並上傳",
+                "paragraph": "選擇世界計劃中的背景，或上傳你自己的背景"
+            },
+            "split": {
+                "header": "拆分位置",
+                "paragraph": "你也可以使用「拆分位置」，在一個專案中顯示兩個不同的背景"
+            }
+        },
+        "text-menu": {
+            "header": "文字選單",
+            "name-tag": {
+                "header": "名稱標籤",
+                "paragraph": "這是你設定角色名稱的地方",
+                "easy-switch": {
+                    "header": "快捷切換",
+                    "paragraph": "你可以使用「快速切換」在兩個（或多個）名稱之間快速切換，並且不需要自己輸入"
+                }
+            },
+            "dialogue": {
+                "header": "對話",
+                "paragraph": "你可以在這裡輸入角色之間的對話"
+            },
+            "scene-text": {
+                "header": "場景名稱",
+                "paragraph": "你故事的場景和時間應該在故事的開頭顯示"
+            }
+        },
+        "model-menu": {
+            "header": "模型和動作選單",
+            "selected-layer": {
+                "header": "所選擇的圖層",
+                "paragraph": "你的專案上顯示的所有模型都在這裡，你可以選擇並進行一些調整",
+                "add-model": {
+                    "header": "新增模型",
+                    "paragraph": "你可以在這裡新增你自己的Live2D模型及上傳你自己的圖片"
+                },
+                "upload-sprite": {
+                    "header": "上傳PNG動作",
+                    "paragraph": "上傳你自己的PNG動作"
+                },
+                "hide-layer": {
+                    "header": "隱藏圖層",
+                    "paragraph": "切換圖層的可見性。"
+                },
+                "remove-layer": {
+                    "header": "刪除圖層",
+                    "paragraph": "刪除你所選擇的圖層。"
+                }
+            },
+            "transform": {
+                "header": "調整",
+                "paragraph": "你可以在這裡移動、更改大小或是隱藏你所選擇的圖層"
+            },
+            "character": {
+                "header": "角色",
+                "paragraph": "如果所選擇的模型是Live2D，那麼你可以從「世界計劃角色集」裡面選擇角色"
+            },
+            "costume": {
+                "header": "服裝",
+                "paragraph": "選擇完角色後，你可以選擇你自己喜歡的服裝"
+            },
+            "emotion": {
+                "header": "表情",
+                "pose": {
+                    "header": "動作",
+                    "paragraph": "更改你所選擇的角色的姿勢"
+                },
+                "expression": {
+                    "header": "表情",
+                    "paragraph": "更改你所選擇的角色的面部表情"
+                }
+            },
+            "mouth": {
+                "header": "嘴部",
+                "paragraph": "你可以在這裡更改和調整Live2D模型口部的張開大小和形狀"
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "你可以透過調整Live2D的參數來自定義角色的姿勢和空閒動畫",
+                "import-export": {
+                    "header": "匯入/匯出",
+                    "paragraph": "你可以儲存對這個模型所做的調整，並把這些調整載入到其他的模型上"
+                },
+                "emotion-copy": {
+                    "header": "複製表情",
+                    "paragraph": "複製你給這個角色設定的表情和姿勢的Live2D參數，有這麼方便的功能真是泰褲辣！"
+                }
+            }
+        },
+        "save": {
+            "header": "完成後，記得儲存你的專案！不要怪我沒提醒過你",
+            "scene-paragraph": "這個功能可以讓你把整個專案儲存為可編輯的格式，然後在下一次開啟時重新載入"
+        },
+        "ending": {
+            "header": "就是這樣！",
+            "paragraph": "如果你想繼續編輯這個專案，你可以在設定裡重新載入它們"
+        }
     }
 }

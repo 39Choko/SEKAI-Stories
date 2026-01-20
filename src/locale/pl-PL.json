@@ -23,7 +23,7 @@
             "upload": "Załaduj",
             "upload-info": "Aby się upewnić, że obraz będzie wyglądał dobrze i się nie rozciągnie lub przytnie, użyj obrazka o proporcjach 16:9."
         },
-         "lighting": {
+        "lighting": {
             "header": "Oświetlenie",
             "preset": "Preset",
             "red": "Czerwony",
@@ -173,7 +173,7 @@
     },
     "support": {
         "header": "Wsparcie",
-		"report-header": "Znalazłeś błąd?",
+        "report-header": "Znalazłeś błąd?",
         "report-details": "Prosimy o zgłaszanie spotkanych błędów i problemów na naszym repozytorium GitHub.",
         "report-button": "Zgłoś problem",
         "details": "Jeśli podoba ci się SEKAI Stories, możesz mnie wesprzeć na poniższe sposoby:",
@@ -224,7 +224,6 @@
         "kaito": "KAITO",
         "others": "Inni"
     },
-	
     "group": {
         "all": "Wszystkie",
         "bookmarks": "Polubione",
@@ -239,11 +238,10 @@
         "temp": "Inne",
         "cards": "Karty"
     },
-	
     "settings": {
         "header": "Ustawienia",
         "language": "Język",
-		"auto-save": "Autozapis",
+        "auto-save": "Autozapis",
         "auto-save-description": "Twoja praca zapisuje się automatycznie co 3 minuty. Jeżeli coś pójdzie nie tak, możesz pobrać najnowszą kopię zapasową jako plik SEKAISCENE.",
         "auto-save-button": "Pobierz najnowszą kopię",
         "toggles": "Opcje",
@@ -253,11 +251,10 @@
         "expand": "Rozwiń wszystkie opcje menu",
         "tutorial": "Samouczek",
         "show-tutorial": "Pokaż samouczek ponownie",
-        "mentalHealthWindow": "Wyświetl ostrzeżenie o zdrowiu psychicznym",
-        "saveDialog": "Wyświetl okno zapisu",
-        "blankCanvas": "Puste płótno na start"
+        "mental-health-window": "Wyświetl ostrzeżenie o zdrowiu psychicznym",
+        "save-dialog": "Wyświetl okno zapisu",
+        "blank-canvas": "Puste płótno na start"
     },
-	
     "import-export": {
         "header": "Import/Eksport",
         "description": "Własne tła i obrazy nie są dołączone do tego pliku SEKAISCENE."
@@ -283,61 +280,119 @@
     },
     "mental-health": {},
     "tutorial": {
-        "initialSetup1": "Przesuń suwak do momentu, w którym nie widać czerwonego.",
-        "initialSetup2": "Zawsze możesz to potem zmienić w menu tekstu.",
-        "welcomeHeader": "Witaj w SEKAI Stories!",
-        "welcomeIntroHeader": "Ten samouczek wytłumaczy Ci, jak korzystać z tej strony.",
-        "welcomeIntroParagraph1": "Jeżeli już umiesz korzystać z SEKAI Stories, możesz zamknąć to okno.",
-        "welcomeIntroParagraph2": "Spokojnie! Zawsze możesz otworzyć ten poradnik ponownie przez przycisk w ustawieniach.",
-        "confirmFirstTime": "Rozpocznij samouczek",
-        "menuNavigationHeader": "Te przyciski pozwalają nawigować po menu!",
-        "backgroundMenuHeader": "Menu Tła",
-        "selectUploadHeader": "Wybierz lub prześlij swoje",
-        "selectUploadParagraph": "Wybierz tło z Project SEKAI lub prześlij swoje własne.",
-        "splitLocationHeader": "Podzielone Tła",
-        "splitLocationParagraph": "Możesz także użyć podzielonych lokacji, które składają się z dwóch teł.",
-        "textMenuHeader": "Menu Tekstu",
-        "nameTagHeader": "Pole na imię",
-        "nameTagParagraph": "Tutaj możesz wpisać dowolne imię dla postaci.",
-        "easySwitchHeader": "Łatwe przełączanie",
-        "easySwitchParagraph": "Możesz dodać kilka imion postaci i zmieniać je szybciej, bez potrzeby ponownego wpisywania.",
-        "dialogueHeader": "Dialog",
-        "dialogueParagraph": "Wpisz tutaj tekst który ma wymówić postać.",
-        "sceneTextHeader": "Tekst Sceny",
-        "sceneTextParagraph": "Czas i miejsce akcji Twojej sceny. Zazwyczaj widziany na początku każdej opowieści w PJSK.",
-        "modelMenuHeader": "Menu Modeli",
-        "selectedLayerHeader": "Wybrana warstwa",
-        "selectedLayerParagraph": "Wszystkie dostępne do wyboru modele widoczne w Twojej scenie są tutaj.",
-        "addModelHeader": "Dodaj Model",
-        "addModelParagraph": "Możesz dodać model Live2D postaci lub przesłać swój własny obrazek.",
-        "uploadSpriteHeader": "Prześlij obraz PNG",
-        "uploadSpriteParagraph": "Kliknij aby wybrać obrazek PNG z Twojego komputera.",
-        "hideLayerHeader": "Widoczność",
-        "hideLayerParagraph": "Pokaż lub ukryj wybraną postać.",
-        "removeLayerHeader": "Usuń warstwę",
-        "removeLayerParagraph": "Usuwa wybraną warstwę.",
-        "transformHeader": "Transformacje",
-        "transformParagraph": "Ta opcja pozwala ci przemieszczać, zmieniać rozmiar i ukryć wybraną warstwę.",
-        "characterHeader": "Postać",
-        "characterParagraph": "Jeżeli korzystasz z modelu Live2D, możesz wybrać postacie z PJSK.",
-        "costumeHeader": "Kostiumy",
-        "costumeParagraph": "Po wyborze postaci, możesz wybrać jej kostium z listy.",
-        "emotionHeader": "Emocje",
-        "poseHeader": "Poza",
-        "poseParagraph": "Zmienia pozę wybranej postaci.",
-        "expressionHeader": "Wyraz twarzy",
-        "expressionParagraph": "Wybierz wyraz twarzy wybranej postaci.",
-        "mouthHeader": "Usta",
-        "mouthParagraph": "Pozwala zmienić kształt ust modelu Live2D.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "Możesz wybrać własne pozy używając parametrów Live2D oraz zapauzować animację bezczynności.",
-        "importExportHeader": "Import/Eksport",
-        "importExportParagraph": "Możesz także pobrać swoje ustawienia parametrów Live2D oraz przesłać je ponownie do innego modelu.",
-        "emotionCopyHeader": "Kopiuj Emocję",
-        "emotionCopyParagraph": "Kopiuje pozę i wyraz twarzy modelu Live2D.",
-        "saveHeader": "Na koniec, zapisz swoją pracę!",
-        "sceneImportExportParagraph": "Pozwoli ci na pobranie swojej sceny jako format, który możesz później dowolnie edytować.",
-        "endHeader": "To wszystko!",
-        "endParagraph": "Jeżeli jesteś niepewny i chcesz powtórzyć samouczek, wybierz opcję \"Pokaż samouczek\" w ustawieniach."
+        "initial-setup": {
+            "paragraph-1": "Przesuń suwak do momentu, w którym nie widać czerwonego.",
+            "paragraph-2": "Zawsze możesz to potem zmienić w menu tekstu."
+        },
+        "welcome": {
+            "header": "Witaj w SEKAI Stories!",
+            "intro-header": "Ten samouczek wytłumaczy Ci, jak korzystać z tej strony.",
+            "paragraph-1": "Jeżeli już umiesz korzystać z SEKAI Stories, możesz zamknąć to okno.",
+            "paragraph-2": "Spokojnie! Zawsze możesz otworzyć ten poradnik ponownie przez przycisk w ustawieniach.",
+            "confirm-first-time": "Rozpocznij samouczek"
+        },
+        "menu-navigation": {
+            "header": "Te przyciski pozwalają nawigować po menu!"
+        },
+        "background-menu": {
+            "header": "Menu Tła",
+            "select-upload": {
+                "header": "Wybierz lub prześlij swoje",
+                "paragraph": "Wybierz tło z Project SEKAI lub prześlij swoje własne."
+            },
+            "split": {
+                "header": "Podzielone Tła",
+                "paragraph": "Możesz także użyć podzielonych lokacji, które składają się z dwóch teł."
+            }
+        },
+        "text-menu": {
+            "header": "Menu Tekstu",
+            "name-tag": {
+                "header": "Pole na imię",
+                "paragraph": "Tutaj możesz wpisać dowolne imię dla postaci.",
+                "easy-switch": {
+                    "header": "Łatwe przełączanie",
+                    "paragraph": "Możesz dodać kilka imion postaci i zmieniać je szybciej, bez potrzeby ponownego wpisywania."
+                }
+            },
+            "dialogue": {
+                "header": "Dialog",
+                "paragraph": "Wpisz tutaj tekst który ma wymówić postać."
+            },
+            "scene-text": {
+                "header": "Tekst Sceny",
+                "paragraph": "Czas i miejsce akcji Twojej sceny. Zazwyczaj widziany na początku każdej opowieści w PJSK."
+            }
+        },
+        "model-menu": {
+            "header": "Menu Modeli",
+            "selected-layer": {
+                "header": "Wybrana warstwa",
+                "paragraph": "Wszystkie dostępne do wyboru modele widoczne w Twojej scenie są tutaj.",
+                "add-model": {
+                    "header": "Dodaj Model",
+                    "paragraph": "Możesz dodać model Live2D postaci lub przesłać swój własny obrazek."
+                },
+                "upload-sprite": {
+                    "header": "Prześlij obraz PNG",
+                    "paragraph": "Kliknij aby wybrać obrazek PNG z Twojego komputera."
+                },
+                "hide-layer": {
+                    "header": "Widoczność",
+                    "paragraph": "Pokaż lub ukryj wybraną postać."
+                },
+                "remove-layer": {
+                    "header": "Usuń warstwę",
+                    "paragraph": "Usuwa wybraną warstwę."
+                }
+            },
+            "transform": {
+                "header": "Transformacje",
+                "paragraph": "Ta opcja pozwala ci przemieszczać, zmieniać rozmiar i ukryć wybraną warstwę."
+            },
+            "character": {
+                "header": "Postać",
+                "paragraph": "Jeżeli korzystasz z modelu Live2D, możesz wybrać postacie z PJSK."
+            },
+            "costume": {
+                "header": "Kostiumy",
+                "paragraph": "Po wyborze postaci, możesz wybrać jej kostium z listy."
+            },
+            "emotion": {
+                "header": "Emocje",
+                "pose": {
+                    "header": "Poza",
+                    "paragraph": "Zmienia pozę wybranej postaci."
+                },
+                "expression": {
+                    "header": "Wyraz twarzy",
+                    "paragraph": "Wybierz wyraz twarzy wybranej postaci."
+                }
+            },
+            "mouth": {
+                "header": "Usta",
+                "paragraph": "Pozwala zmienić kształt ust modelu Live2D."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "Możesz wybrać własne pozy używając parametrów Live2D oraz zapauzować animację bezczynności.",
+                "import-export": {
+                    "header": "Import/Eksport",
+                    "paragraph": "Możesz także pobrać swoje ustawienia parametrów Live2D oraz przesłać je ponownie do innego modelu."
+                },
+                "emotion-copy": {
+                    "header": "Kopiuj Emocję",
+                    "paragraph": "Kopiuje pozę i wyraz twarzy modelu Live2D."
+                }
+            }
+        },
+        "save": {
+            "header": "Na koniec, zapisz swoją pracę!",
+            "scene-paragraph": "Pozwoli ci na pobranie swojej sceny jako format, który możesz później dowolnie edytować."
+        },
+        "ending": {
+            "header": "To wszystko!",
+            "paragraph": "Jeżeli jesteś niepewny i chcesz powtórzyć samouczek, wybierz opcję \"Pokaż samouczek\" w ustawieniach."
+        }
     }
 }

@@ -23,7 +23,7 @@ const SettingsButton: React.FC = () => {
     useEffect(() => {
         if (stillAlive < 39) return;
         setErrorInformation(
-            "The cake is a lie.\n(miku radio edit by: digiral)"
+            "The cake is a lie.\n(miku radio edit by: digiral)",
         );
         if (stillAlive == 39) {
             const radio = new Audio("/sound/85.2-miku.wav");
@@ -94,7 +94,7 @@ const SettingsButton: React.FC = () => {
         setOpenAll(value);
     };
     const handleMentalHealthWindow = (
-        e: React.ChangeEvent<HTMLInputElement>
+        e: React.ChangeEvent<HTMLInputElement>,
     ) => {
         const value = e.target.checked;
         localStorage.setItem("mentalHealthWindow", String(value));
@@ -135,7 +135,7 @@ const SettingsButton: React.FC = () => {
                                         <option key={code} value={code}>
                                             {name}
                                         </option>
-                                    )
+                                    ),
                                 )}
                             </select>
                             <Translators lng={lng} />
@@ -178,13 +178,13 @@ const SettingsButton: React.FC = () => {
                             />
                             <Checkbox
                                 id="saveDialog"
-                                label={t("settings.saveDialog")}
+                                label={t("settings.save-dialog")}
                                 checked={showSaveDialog}
                                 onChange={handleSaveDialog}
                             />
                             <Checkbox
                                 id="blankCanvas"
-                                label={t("settings.blankCanvas")}
+                                label={t("settings.blank-canvas")}
                                 checked={blankCanvas}
                                 onChange={handleBlankCanvas}
                             />
@@ -197,7 +197,7 @@ const SettingsButton: React.FC = () => {
                             {mentalHealthCookie && (
                                 <Checkbox
                                     id="mentalHealth"
-                                    label={t("settings.mentalHealthWindow")}
+                                    label={t("settings.mental-health-window")}
                                     checked={showMentalHealthWindow}
                                     onChange={handleMentalHealthWindow}
                                 />

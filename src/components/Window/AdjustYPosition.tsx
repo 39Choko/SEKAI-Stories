@@ -124,8 +124,8 @@ const AdjustYPosition: React.FC<AdjustYPositionProps> = ({
         >
             <div className="window__content">
                 <h1>{t("text.y-offset.header")}</h1>
-                <p>{t("tutorial.initialSetup1")}</p>
-                <p>{t("tutorial.initialSetup2")}</p>
+                <p>{t("tutorial.initial-setup.paragraph-1")}</p>
+                <p>{t("tutorial.initial-setup.paragraph-2")}</p>
                 <canvas
                     height={250}
                     width={660}

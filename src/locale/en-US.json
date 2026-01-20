@@ -14,7 +14,6 @@
         "import": "Import",
         "export": "Export"
     },
-
     "background": {
         "header": "Background",
         "select": {
@@ -56,7 +55,6 @@
             }
         }
     },
-
     "text": {
         "header": "Text",
         "name-tag": {
@@ -84,7 +82,6 @@
         },
         "toggles": "Toggles"
     },
-
     "model": {
         "header": "Model",
         "selected-layer": {
@@ -165,18 +162,15 @@
         "re-apply": "Re-apply",
         "advanced": "Advanced"
     },
-
     "experimental": {
         "header": "Experimental",
         "details": "If you don't see any changes, you may try refreshing the canvas.",
         "refresh": "Refresh"
     },
-
     "clear": {
         "message": "This will clear the whole canvas. Any progress will be lost!",
         "start-blank": "Start with a blank canvas next time."
     },
-
     "support": {
         "header": "Support",
         "report-header": "Found a bug?",
@@ -188,7 +182,6 @@
         "special-thanks-header": "Special Thanks",
         "special-thanks-description": "I would like to thank the owner of Sekai Viewer for allowing me to access their models through this site!"
     },
-
     "loadings": {
         "please-wait": "Please wait...",
         "loading-1": "Fetching model file for",
@@ -200,7 +193,6 @@
         "loading-7": "Putting new model",
         "failed-load": "Failed to load new model!"
     },
-
     "character": {
         "none": "None",
         "blank": "",
@@ -233,7 +225,6 @@
         "kaito": "KAITO",
         "others": "Others"
     },
-
     "group": {
         "all": "All",
         "bookmarks": "Bookmarks",
@@ -248,7 +239,6 @@
         "temp": "Others",
         "cards": "Cards"
     },
-
     "settings": {
         "header": "Settings",
         "language": "Language",
@@ -262,72 +252,14 @@
         "expand": "Expand all menu options",
         "tutorial": "Tutorial",
         "show-tutorial": "Show one more time",
-        "mentalHealthWindow": "Show mental health warning",
-        "saveDialog": "Show save dialog",
-        "blankCanvas": "Start with a blank canvas",
+        "mental-health-window": "Show mental health warning",
+        "save-dialog": "Show save dialog",
+        "blank-canvas": "Start with a blank canvas",
         "announcement": "Show announcement"
     },
     "import-export": {
         "header": "Import/Export",
         "description": "Custom backgrounds and sprites are not included in this SEKAISCENE file."
-    },
-    "tutorial": {
-        "initialSetup1": "Adjust the slider until you don't see any red spots.",
-        "initialSetup2": "You can always change this back on the Text Menu.",
-        "welcomeHeader": "Welcome to SEKAI Stories!",
-        "welcomeIntroHeader": "This window will guide you on how to use this site.",
-        "welcomeIntroParagraph1": "If you are familiar with this application, you can close this window.",
-        "welcomeIntroParagraph2": "You can also open this tutorial at any time on Settings.",
-        "confirmFirstTime": "It's my first time here",
-        "menuNavigationHeader": "These will navigate you between menus!",
-        "backgroundMenuHeader": "Background Menu",
-        "selectUploadHeader": "Select and Upload",
-        "selectUploadParagraph": "Select backgrounds from Project SEKAI or upload your own.",
-        "splitLocationHeader": "Split Location",
-        "splitLocationParagraph": "You can also do Split Location, showing two in one background.",
-        "textMenuHeader": "Text Menu",
-        "nameTagHeader": "Name Tag",
-        "nameTagParagraph": "This is where you put the names of your character.",
-        "easySwitchHeader": "Easy Switch",
-        "easySwitchParagraph": "Easy Switch will allow you to switch between two characters without retyping.",
-        "dialogueHeader": "Dialogue",
-        "dialogueParagraph": "This is where you put the dialogue of what the character is speaking.",
-        "sceneTextHeader": "Scene Text",
-        "sceneTextParagraph": "The time and location of the scene you're making, usually seen at the start of every PJSK story.",
-        "modelMenuHeader": "Model & Sprites Menu",
-        "selectedLayerHeader": "Selected Layer",
-        "selectedLayerParagraph": "All the models shown on your work are located here. You can select and do some tweaking.",
-        "addModelHeader": "Add Model",
-        "addModelParagraph": "You can add a new Live2D model character and upload your own image.",
-        "uploadSpriteHeader": "Upload PNG Sprite",
-        "uploadSpriteParagraph": "Upload your own PNG sprite.",
-        "hideLayerHeader": "Visibility",
-        "hideLayerParagraph": "Toggles the layer's visibility.",
-        "removeLayerHeader": "Remove Layer",
-        "removeLayerParagraph": "Deletes the selected layer.",
-        "transformHeader": "Transform",
-        "transformParagraph": "This will allow you to move, change the size, and hide the layer you selected.",
-        "characterHeader": "Character",
-        "characterParagraph": "If the selected model is a Live2D, you can select characters from the PJSK Cast.",
-        "costumeHeader": "Costume",
-        "costumeParagraph": "Once you have selected a character, you can select a costume of your choice.",
-        "emotionHeader": "Emotion",
-        "poseHeader": "Pose",
-        "poseParagraph": "Changes the pose of the character selected.",
-        "expressionHeader": "Expression",
-        "expressionParagraph": "Changes the facial expression of the character selected.",
-        "mouthHeader": "Mouth",
-        "mouthParagraph": "Allows you to change and tweak the opening and shape of the mouth of a Live2D model.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "You can customize your own poses by tweaking the Live2D parameters and pause the idle animation.",
-        "importExportHeader": "Import/Export",
-        "importExportParagraph": "You can also save the adjustments you made and load it to another model.",
-        "emotionCopyHeader": "Emotion Copy",
-        "emotionCopyParagraph": "Copies the Live2D Parameters of the current expression and pose you set.",
-        "saveHeader": "Once you're done, save your work!",
-        "sceneImportExportParagraph": "This will allow you to save and load your entire scene as an editable format.",
-        "endHeader": "And that's it!",
-        "endParagraph": "If you wish to repeat this, you can access them back on Settings."
     },
     "save": {
         "header": "Save",
@@ -353,5 +285,121 @@
         "details": "What you are feeling matters and you are not alone. If you're going through a difficult moment, you can click the button below to find resources and people who are there to help.",
         "settings-details": "You can disable this message on Settings.",
         "button": "Take me there"
+    },
+    "tutorial": {
+        "initial-setup": {
+            "paragraph-1": "Adjust the slider until you don't see any red spots.",
+            "paragraph-2": "You can always change this back on the Text Menu."
+        },
+        "welcome": {
+            "header": "Welcome to SEKAI Stories!",
+            "intro-header": "This window will guide you on how to use this site.",
+            "paragraph-1": "If you are familiar with this application, you can close this window.",
+            "paragraph-2": "You can also open this tutorial at any time on Settings.",
+            "confirm-first-time": "It's my first time here"
+        },
+        "menu-navigation": {
+            "header": "These will navigate you between menus!"
+        },
+        "background-menu": {
+            "header": "Background Menu",
+            "select-upload": {
+                "header": "Select and Upload",
+                "paragraph": "Select backgrounds from Project SEKAI or upload your own."
+            },
+            "split": {
+                "header": "Split Location",
+                "paragraph": "You can also do Split Location, showing two in one background."
+            }
+        },
+        "text-menu": {
+            "header": "Text Menu",
+            "name-tag": {
+                "header": "Name Tag",
+                "paragraph": "This is where you put the names of your character.",
+                "easy-switch": {
+                    "header": "Easy Switch",
+                    "paragraph": "Easy Switch will allow you to switch between two characters without retyping."
+                }
+            },
+            "dialogue": {
+                "header": "Dialogue",
+                "paragraph": "This is where you put the dialogue of what the character is speaking."
+            },
+            "scene-text": {
+                "header": "Scene Text",
+                "paragraph": "The time and location of the scene you're making, usually seen at the start of every PJSK story."
+            }
+        },
+        "model-menu": {
+            "header": "Model & Sprites Menu",
+            "selected-layer": {
+                "header": "Selected Layer",
+                "paragraph": "All the models shown on your work are located here. You can select and do some tweaking.",
+                "add-model": {
+                    "header": "Add Model",
+                    "paragraph": "You can add a new Live2D model character and upload your own image."
+                },
+                "upload-sprite": {
+                    "header": "Upload PNG Sprite",
+                    "paragraph": "Upload your own PNG sprite."
+                },
+                "hide-layer": {
+                    "header": "Visibility",
+                    "paragraph": "Toggles the layer's visibility."
+                },
+                "remove-layer": {
+                    "header": "Remove Layer",
+                    "paragraph": "Deletes the selected layer."
+                }
+            },
+            "transform": {
+                "header": "Transform",
+                "paragraph": "This will allow you to move, change the size, and hide the layer you selected."
+            },
+            "character": {
+                "header": "Character",
+                "paragraph": "If the selected model is a Live2D, you can select characters from the PJSK Cast."
+            },
+            "costume": {
+                "header": "Costume",
+                "paragraph": "Once you have selected a character, you can select a costume of your choice."
+            },
+            "emotion": {
+                "header": "Emotion",
+                "pose": {
+                    "header": "Pose",
+                    "paragraph": "Changes the pose of the character selected."
+                },
+                "expression": {
+                    "header": "Expression",
+                    "paragraph": "Changes the facial expression of the character selected."
+                }
+            },
+            "mouth": {
+                "header": "Mouth",
+                "paragraph": "Allows you to change and tweak the opening and shape of the mouth of a Live2D model."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "You can customize your own poses by tweaking the Live2D parameters and pause the idle animation.",
+                "import-export": {
+                    "header": "Import/Export",
+                    "paragraph": "You can also save the adjustments you made and load it to another model."
+                },
+                "emotion-copy": {
+                    "header": "Emotion Copy",
+                    "paragraph": "Copies the Live2D Parameters of the current expression and pose you set."
+                }
+            }
+        },
+        "save": {
+            "header": "Once you're done, save your work!",
+            "scene-paragraph": "This will allow you to save and load your entire scene as an editable format."
+        },
+        "ending": {
+            "header": "And that's it!",
+            "paragraph": "If you wish to repeat this, you can access them back on Settings."
+        }
     }
 }

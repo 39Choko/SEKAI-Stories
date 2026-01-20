@@ -251,9 +251,9 @@
         "expand": "自动展开所有菜单选项",
         "tutorial": "教程",
         "show-tutorial": "再次显示",
-        "mentalHealthWindow": "显示心理健康警告",
-        "saveDialog": "显示保存菜单",
-        "blankCanvas": "从空白画布开始"
+        "mental-health-window": "显示心理健康警告",
+        "save-dialog": "显示保存菜单",
+        "blank-canvas": "从空白画布开始"
     },
     "import-export": {
         "header": "导入/导出",
@@ -285,61 +285,119 @@
         "button": "带我过去"
     },
     "tutorial": {
-        "initialSetup1": "调整位置，直到你看不到任何红色的地方",
-        "initialSetup2": "你之后可以在文本菜单上把文字改回原来的位置",
-        "welcomeHeader": "欢迎来到SEKAI Stories!",
-        "welcomeIntroHeader": "这个超级无敌、特别好用、翻译了很久的教程会教会你怎样使用这个网站",
-        "welcomeIntroParagraph1": "如果你已经是个老手了，那么你就可以直接关闭这个教程了",
-        "welcomeIntroParagraph2": "不必担心你之后会找不到这个教程，你之后可以随时在设置里再次打开这个教程",
-        "confirmFirstTime": "我第一次使用这个网站",
-        "menuNavigationHeader": "这些会帮助你不在菜单和菜单中间迷路",
-        "backgroundMenuHeader": "背景菜单",
-        "selectUploadHeader": "选择并上传",
-        "selectUploadParagraph": "从PJSK中选择背景或者上传你自己的背景",
-        "splitLocationHeader": "拆分位置",
-        "splitLocationParagraph": "你也可以使用“拆分位置”，在一个画布中显示两个不同的背景",
-        "textMenuHeader": "文字菜单",
-        "nameTagHeader": "名称标签",
-        "nameTagParagraph": "这是你设置角色名称的地方",
-        "easySwitchHeader": "快捷切换",
-        "easySwitchParagraph": "你可以使用“快捷切换”来在两个（或多个）名称之间快速切换，并且不需要你自己输入",
-        "dialogueHeader": "对话",
-        "dialogueParagraph": "你可以在这里输入角色之间的对话",
-        "sceneTextHeader": "场景名称",
-        "sceneTextParagraph": "你故事的场景和时间应该在故事的开头显示",
-        "modelMenuHeader": "模型和动作菜单",
-        "selectedLayerHeader": "所选择的图层",
-        "selectedLayerParagraph": "你画布上显示的所有模型都在这里，你可以选择并进行一些调整",
-        "addModelHeader": "添加模型",
-        "addModelParagraph": "你可以在这里添加你自己的Live2D模型及上传你自己的图片",
-        "hideLayerHeader": "隐藏图层",
-        "hideLayerParagraph": "切换图层的可见性。",
-        "uploadSpriteHeader": "上传PNG动作",
-        "uploadSpriteParagraph": "上传你自己的PNG动作",
-        "removeLayerHeader": "删除图层",
-        "removeLayerParagraph": "删除你所选择的图层。",
-        "transformHeader": "变换",
-        "transformParagraph": "你可以在这里移动、更改大小或是隐藏你所选择的图层",
-        "characterHeader": "角色",
-        "characterParagraph": "如果所选择的模型是Live2D，那么你可以从PJSK Cast里面选择角色",
-        "costumeHeader": "服装",
-        "costumeParagraph": "选择完角色后，你可以选择你自己喜欢的服装",
-        "emotionHeader": "神态",
-        "poseHeader": "动作",
-        "poseParagraph": "更改你所选择的角色的姿势",
-        "expressionHeader": "表情",
-        "expressionParagraph": "更改你所选择的角色的面部表情",
-        "mouthHeader": "嘴部",
-        "mouthParagraph": "你可以在这里更改和调整Live2D模型口部的张开大小和形状",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "你可以通过调整Live2D的参数来自定义角色的姿势和空闲动画",
-        "importExportHeader": "导入/导出",
-        "importExportParagraph": "你可以保存对这个模型所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗？",
-        "emotionCopyHeader": "复制神态",
-        "emotionCopyParagraph": "复制你给这个角色设置的表情和姿势的Live2D参数，有这么方便的功能真是泰裤辣！",
-        "saveHeader": "完成后，记得保存你的画布！不要怪我没提醒过你",
-        "sceneImportExportParagraph": "这个功能可以让你把整个画布保存为可编辑的格式，然后在下一次打开时重新加载",
-        "endHeader": "就是这样！",
-        "endParagraph": "如果你想继续编辑这个画布，你可以在设置里重新加载它们"
+        "initial-setup": {
+            "paragraph-1": "调整位置，直到你看不到任何红色的地方",
+            "paragraph-2": "你之后可以在文本菜单上把文字改回原来的位置"
+        },
+        "welcome": {
+            "header": "欢迎来到SEKAI Stories!",
+            "intro-header": "这个超级无敌、特别好用、翻译了很久的教程会教会你怎样使用这个网站",
+            "paragraph-1": "如果你已经是个老手了，那么你就可以直接关闭这个教程了",
+            "paragraph-2": "不必担心你之后会找不到这个教程，你之后可以随时在设置里再次打开这个教程",
+            "confirm-first-time": "我第一次使用这个网站"
+        },
+        "menu-navigation": {
+            "header": "这些会帮助你不在菜单和菜单中间迷路"
+        },
+        "background-menu": {
+            "header": "背景菜单",
+            "select-upload": {
+                "header": "选择并上传",
+                "paragraph": "从PJSK中选择背景或者上传你自己的背景"
+            },
+            "split": {
+                "header": "拆分位置",
+                "paragraph": "你也可以使用“拆分位置”，在一个画布中显示两个不同的背景"
+            }
+        },
+        "text-menu": {
+            "header": "文字菜单",
+            "name-tag": {
+                "header": "名称标签",
+                "paragraph": "这是你设置角色名称的地方",
+                "easy-switch": {
+                    "header": "快捷切换",
+                    "paragraph": "你可以使用“快捷切换”来在两个（或多个）名称之间快速切换，并且不需要你自己输入"
+                }
+            },
+            "dialogue": {
+                "header": "对话",
+                "paragraph": "你可以在这里输入角色之间的对话"
+            },
+            "scene-text": {
+                "header": "场景名称",
+                "paragraph": "你故事的场景和时间应该在故事的开头显示"
+            }
+        },
+        "model-menu": {
+            "header": "模型和动作菜单",
+            "selected-layer": {
+                "header": "所选择的图层",
+                "paragraph": "你画布上显示的所有模型都在这里，你可以选择并进行一些调整",
+                "add-model": {
+                    "header": "添加模型",
+                    "paragraph": "你可以在这里添加你自己的Live2D模型及上传你自己的图片"
+                },
+                "upload-sprite": {
+                    "header": "上传PNG动作",
+                    "paragraph": "上传你自己的PNG动作"
+                },
+                "hide-layer": {
+                    "header": "隐藏图层",
+                    "paragraph": "切换图层的可见性。"
+                },
+                "remove-layer": {
+                    "header": "删除图层",
+                    "paragraph": "删除你所选择的图层。"
+                }
+            },
+            "transform": {
+                "header": "变换",
+                "paragraph": "你可以在这里移动、更改大小或是隐藏你所选择的图层"
+            },
+            "character": {
+                "header": "角色",
+                "paragraph": "如果所选择的模型是Live2D，那么你可以从PJSK Cast里面选择角色"
+            },
+            "costume": {
+                "header": "服装",
+                "paragraph": "选择完角色后，你可以选择你自己喜欢的服装"
+            },
+            "emotion": {
+                "header": "神态",
+                "pose": {
+                    "header": "动作",
+                    "paragraph": "更改你所选择的角色的姿势"
+                },
+                "expression": {
+                    "header": "表情",
+                    "paragraph": "更改你所选择的角色的面部表情"
+                }
+            },
+            "mouth": {
+                "header": "嘴部",
+                "paragraph": "你可以在这里更改和调整Live2D模型口部的张开大小和形状"
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "你可以通过调整Live2D的参数来自定义角色的姿势和空闲动画",
+                "import-export": {
+                    "header": "导入/导出",
+                    "paragraph": "你可以保存对这个模型所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗？"
+                },
+                "emotion-copy": {
+                    "header": "复制神态",
+                    "paragraph": "复制你给这个角色设置的表情和姿势的Live2D参数，有这么方便的功能真是泰裤辣！"
+                }
+            }
+        },
+        "save": {
+            "header": "完成后，记得保存你的画布！不要怪我没提醒过你",
+            "scene-paragraph": "这个功能可以让你把整个画布保存为可编辑的格式，然后在下一次打开时重新加载"
+        },
+        "ending": {
+            "header": "就是这样！",
+            "paragraph": "如果你想继续编辑这个画布，你可以在设置里重新加载它们"
+        }
     }
 }

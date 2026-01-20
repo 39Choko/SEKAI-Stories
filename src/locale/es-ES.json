@@ -247,8 +247,8 @@
         "expand": "Expandir todos los menus",
         "tutorial": "Tutorial",
         "show-tutorial": "Mostrar una vez mas",
-        "saveDialog": "Mostrar dialogo guardado",
-        "blankCanvas": "Empezar con un lienzo en blanco"
+        "save-dialog": "Mostrar dialogo guardado",
+        "blank-canvas": "Empezar con un lienzo en blanco"
     },
     "import-export": {
         "header": "Importar/Exportar",
@@ -274,59 +274,119 @@
     },
     "mental-health": {},
     "tutorial": {
-        "initialSetup1": "Ajusta el dezlizante hasta que no veas ninguna zona roja.",
-        "initialSetup2": "Siempre podras cambiarlo en el menu de texto.",
-        "welcomeHeader": "¡Bienvenido a SEKAI Stories!",
-        "welcomeIntroHeader": "Esta ventana te guiara en como usar este sitio.",
-        "welcomeIntroParagraph1": "Si estas familiarisado con la aplicacion, puedes cerrar esta ventana.",
-        "welcomeIntroParagraph2": "Tambien podras abrir el tutorial en cualquuer momento en el menu de ajustes.",
-        "confirmFirstTime": "Es mi primera vez aqui",
-        "menuNavigationHeader": "¡Podras navegar atravez de los menus con estos botones!",
-        "backgroundMenuHeader": "Menu de fondos",
-        "selectUploadHeader": "Selecciona y agrega",
-        "selectUploadParagraph": "Selecciona fondos de project SEKAI o sube los tuyos propios.",
-        "splitLocationHeader": "Dividir lugares",
-        "splitLocationParagraph": "Tambien puedes dividir lugares, mostrando dos en el mismo fondo.",
-        "textMenuHeader": "Menu de texto",
-        "nameTagHeader": "Nombre",
-        "nameTagParagraph": "Aqui es donde pones el nombre de tu personaje.",
-        "easySwitchHeader": "Cambio rapido",
-        "easySwitchParagraph": "Cambio rapido te permite cambiar entre dos o mas personajes sin volver a escribirlos.",
-        "dialogueHeader": "Dialogo",
-        "dialogueParagraph": "Aqui es donde pones el dialogo que el personaje esta diciendo.",
-        "sceneTextHeader": "Texto de Escena",
-        "sceneTextParagraph": "la hora y el nombre del lugar de la escena que estas haciendo, usualmente visto al inicio de cada historia de PJSK.",
-        "modelMenuHeader": "Menu de modelos y sprites",
-        "selectedLayerHeader": "Capa seleccionada",
-        "selectedLayerParagraph": "Todos los modelos mostrados en tu trabajo se encontraran aqui. Puedes seleccionarlo y hacer algunos ajustes.",
-        "addModelHeader": "Agregar modelo",
-        "addModelParagraph": "Puedes añadir un nuevo modelo Live2D.",
-        "uploadSpriteHeader": "Añadir un sprite PNG",
-        "uploadSpriteParagraph": "Agrega tu propio sprite PNG.",
-        "removeLayerHeader": "Eliminar capa",
-        "removeLayerParagraph": "Elimina la capa seleccionada.",
-        "transformHeader": "Ajustar",
-        "transformParagraph": "Esto te permitira mover, cambiar el tamaño y ocultar la capa seleccionada.",
-        "characterHeader": "Personaje",
-        "characterParagraph": "Si el modelo seleccionado es un Live2D, podras seleccionar personajes de PJSK.",
-        "costumeHeader": "Traje",
-        "costumeParagraph": "Una vez allas seleccionado un personaje, podras seleccionar un traje.",
-        "emotionHeader": "Emocion",
-        "poseHeader": "Pose",
-        "poseParagraph": "Cambia la pose del personaje seleccionado.",
-        "expressionHeader": "Exprecion",
-        "expressionParagraph": "Cambia la expresion facial del personaje seleccionado.",
-        "mouthHeader": "Boca",
-        "mouthParagraph": "Permite cambiar y ajustar la apertura y forma de la boca del modelo Live2D.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "Puedes personalizar tus propias poses ajustando los parametros del modelo Live2D, ademas de poder pausar la animacion de inactividad.",
-        "importExportHeader": "Importar/Exportar",
-        "importExportParagraph": "Tambien puedes guardar los ajustes hechos y cargarlos en otro modelo.",
-        "emotionCopyHeader": "Copiar emoción",
-        "emotionCopyParagraph": "Copia los parametros Live2D de la expresión y pose que allas puesto.",
-        "saveHeader": "Una vez termines, ¡guarda tu trabajo!",
-        "sceneImportExportParagraph": "Esto te permitira guardar y cargar toda la escena en un archivo editable.",
-        "endHeader": "¡Y eso es!",
-        "endParagraph": "Si deseas repetir el tutorial, puedes aceeder a el mediante los ajustes."
+        "initial-setup": {
+            "paragraph-1": "Ajusta el dezlizante hasta que no veas ninguna zona roja.",
+            "paragraph-2": "Siempre podras cambiarlo en el menu de texto."
+        },
+        "welcome": {
+            "header": "¡Bienvenido a SEKAI Stories!",
+            "intro-header": "Esta ventana te guiara en como usar este sitio.",
+            "paragraph-1": "Si estas familiarisado con la aplicacion, puedes cerrar esta ventana.",
+            "paragraph-2": "Tambien podras abrir el tutorial en cualquuer momento en el menu de ajustes.",
+            "confirm-first-time": "Es mi primera vez aqui"
+        },
+        "menu-navigation": {
+            "header": "¡Podras navegar atravez de los menus con estos botones!"
+        },
+        "background-menu": {
+            "header": "Menu de fondos",
+            "select-upload": {
+                "header": "Selecciona y agrega",
+                "paragraph": "Selecciona fondos de project SEKAI o sube los tuyos propios."
+            },
+            "split": {
+                "header": "Dividir lugares",
+                "paragraph": "Tambien puedes dividir lugares, mostrando dos en el mismo fondo."
+            }
+        },
+        "text-menu": {
+            "header": "Menu de texto",
+            "name-tag": {
+                "header": "Nombre",
+                "paragraph": "Aqui es donde pones el nombre de tu personaje.",
+                "easy-switch": {
+                    "header": "Cambio rapido",
+                    "paragraph": "Cambio rapido te permite cambiar entre dos o mas personajes sin volver a escribirlos."
+                }
+            },
+            "dialogue": {
+                "header": "Dialogo",
+                "paragraph": "Aqui es donde pones el dialogo que el personaje esta diciendo."
+            },
+            "scene-text": {
+                "header": "Texto de Escena",
+                "paragraph": "la hora y el nombre del lugar de la escena que estas haciendo, usualmente visto al inicio de cada historia de PJSK."
+            }
+        },
+        "model-menu": {
+            "header": "Menu de modelos y sprites",
+            "selected-layer": {
+                "header": "Capa seleccionada",
+                "paragraph": "Todos los modelos mostrados en tu trabajo se encontraran aqui. Puedes seleccionarlo y hacer algunos ajustes.",
+                "add-model": {
+                    "header": "Agregar modelo",
+                    "paragraph": "Puedes añadir un nuevo modelo Live2D."
+                },
+                "upload-sprite": {
+                    "header": "Añadir un sprite PNG",
+                    "paragraph": "Agrega tu propio sprite PNG."
+                },
+                "hide-layer": {
+                    "header": null,
+                    "paragraph": null
+                },
+                "remove-layer": {
+                    "header": "Eliminar capa",
+                    "paragraph": "Elimina la capa seleccionada."
+                }
+            },
+            "transform": {
+                "header": "Ajustar",
+                "paragraph": "Esto te permitira mover, cambiar el tamaño y ocultar la capa seleccionada."
+            },
+            "character": {
+                "header": "Personaje",
+                "paragraph": "Si el modelo seleccionado es un Live2D, podras seleccionar personajes de PJSK."
+            },
+            "costume": {
+                "header": "Traje",
+                "paragraph": "Una vez allas seleccionado un personaje, podras seleccionar un traje."
+            },
+            "emotion": {
+                "header": "Emocion",
+                "pose": {
+                    "header": "Pose",
+                    "paragraph": "Cambia la pose del personaje seleccionado."
+                },
+                "expression": {
+                    "header": "Exprecion",
+                    "paragraph": "Cambia la expresion facial del personaje seleccionado."
+                }
+            },
+            "mouth": {
+                "header": "Boca",
+                "paragraph": "Permite cambiar y ajustar la apertura y forma de la boca del modelo Live2D."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "Puedes personalizar tus propias poses ajustando los parametros del modelo Live2D, ademas de poder pausar la animacion de inactividad.",
+                "import-export": {
+                    "header": "Importar/Exportar",
+                    "paragraph": "Tambien puedes guardar los ajustes hechos y cargarlos en otro modelo."
+                },
+                "emotion-copy": {
+                    "header": "Copiar emoción",
+                    "paragraph": "Copia los parametros Live2D de la expresión y pose que allas puesto."
+                }
+            }
+        },
+        "save": {
+            "header": "Una vez termines, ¡guarda tu trabajo!",
+            "scene-paragraph": "Esto te permitira guardar y cargar toda la escena en un archivo editable."
+        },
+        "ending": {
+            "header": "¡Y eso es!",
+            "paragraph": "Si deseas repetir el tutorial, puedes aceeder a el mediante los ajustes."
+        }
     }
 }

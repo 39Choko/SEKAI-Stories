@@ -247,8 +247,8 @@
         "expand": "Kembangkan semua tetapan menu",
         "tutorial": "Tutorial",
         "show-tutorial": "Tunjukkan sekali lagi",
-        "saveDialog": "Tunjukkan dialog setelah simpan",
-        "blankCanvas": "Mulakan dengan kanvas kosong"
+        "save-dialog": "Tunjukkan dialog setelah simpan",
+        "blank-canvas": "Mulakan dengan kanvas kosong"
     },
     "import-export": {
         "header": "Import/Eksport",
@@ -274,59 +274,119 @@
     },
     "mental-health": {},
     "tutorial": {
-        "initialSetup1": "Laraskan penyelak sehingga anda tidak melihat tompok merah.",
-        "initialSetup2": "Anda boleh mengubah semula di Text Menu.",
-        "welcomeHeader": "Selamat Datang ke SEKAI Stories!",
-        "welcomeIntroHeader": "Tetingkap ini akan menolong anda bagaimana cara menggunakan laman sesawang ini.",
-        "welcomeIntroParagraph1": "Jika anda terbiasa dengan aplikasi ini, anda boleh tutup tetingkap.",
-        "welcomeIntroParagraph2": "Anda juga boleh membuka tutorial ini bila-bila masa di Tetapan.",
-        "confirmFirstTime": "Ini kali pertama saya di sini",
-        "menuNavigationHeader": "Ini akan mengemudi anda diantara menu-menu!",
-        "backgroundMenuHeader": "Menu Latar Belakang",
-        "selectUploadHeader": "Pilih dan Muatnaik",
-        "selectUploadParagraph": "Pilih latar belakang dari Project SEKAI atau muatnaik anda punya.",
-        "splitLocationHeader": "Pisahkan Tempat",
-        "splitLocationParagraph": "Anda juga boleh Pisahkan Tempat, memaparkan dua latar belakang sekaligus.",
-        "textMenuHeader": "Menu Teks",
-        "nameTagHeader": "Teg Nama",
-        "nameTagParagraph": "Di sini anda boleh meletakkan nama-nama watak anda.",
-        "easySwitchHeader": "Penukaran Pantas",
-        "easySwitchParagraph": "Penukaran Pantas membenarkan anda untuk menukar diantara dua watak tanpa menaip semula.",
-        "dialogueHeader": "Dialog",
-        "dialogueParagraph": "Ini di mana anda boleh meletakkan dialog watak mana yang sedang bercakap.",
-        "sceneTextHeader": "Teks Adengan",
-        "sceneTextParagraph": "Masa dan tempat adengan yang anda buat, selalunya dilihat pada permulaan setiap cerita PJSK.",
-        "modelMenuHeader": "Menu Sprite & Model",
-        "selectedLayerHeader": "Lapisan Dipilih",
-        "selectedLayerParagraph": "Semua model yang muncul di karya anda terletak di sini. Anda boleh pilih dan lakukan suaian kecil.",
-        "addModelHeader": "Tambah Model",
-        "addModelParagraph": "Anda boleh menambah model watak Live2D baharu.",
-        "uploadSpriteHeader": "Muatnaik Sprite PNG",
-        "uploadSpriteParagraph": "Muatnaik anda punya sprite PNG.",
-        "removeLayerHeader": "Buang Lapisan",
-        "removeLayerParagraph": "Padam lapisan yang dipilih.",
-        "transformHeader": "Ubah",
-        "transformParagraph": "Ini akan membenarkan anda untuk gerakkan, ubah saiz dan sembunyikan lapisan yang dipilih.",
-        "characterHeader": "Watak",
-        "characterParagraph": "Jika model yang dipilih ialah Live2D, anda boleh pilih watak dari PJSK Cast.",
-        "costumeHeader": "Kostum",
-        "costumeParagraph": "Sekali anda telah memilih watak, anda boleh memilih kostum pilihan anda.",
-        "emotionHeader": "Perasaan",
-        "poseHeader": "Gaya",
-        "poseParagraph": "Menukar gaya watak yang dipilih.",
-        "expressionHeader": "Mimik Muka",
-        "expressionParagraph": "Menukar mimik muka watak yang dipilih.",
-        "mouthHeader": "Mulut",
-        "mouthParagraph": "Benarkan anda untuk mengubahsuai pembukaan dan bentuk mulut seorang model Live2D.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "Anda boleh suai gaya anda sendiri dengan mengubah parameter Live2D dan menjedakan animasi endah.",
-        "importExportHeader": "Import/Eksport",
-        "importExportParagraph": "Anda juga boleh menyimpan suaian yang anda lakukan dan muatkan di model lain.",
-        "emotionCopyHeader": "Salin Perasaan",
-        "emotionCopyParagraph": "Menyalin parameter Live2D perasaan semasa dan gaya yang anda tetapkan.",
-        "saveHeader": "Setelah siap, jangan lupa simpankan karya anda!",
-        "sceneImportExportParagraph": "Ini akan membenarkan anda simpan dan muat seluruh adengan anda sebagai format yang boleh disunting.",
-        "endHeader": "Dan itu sahaja!",
-        "endParagraph": "Jika anda mahu mengulanginya, anda boleh mengaksesnya semula di Tetapan."
+        "initial-setup": {
+            "paragraph-1": "Laraskan penyelak sehingga anda tidak melihat tompok merah.",
+            "paragraph-2": "Anda boleh mengubah semula di Text Menu."
+        },
+        "welcome": {
+            "header": "Selamat Datang ke SEKAI Stories!",
+            "intro-header": "Tetingkap ini akan menolong anda bagaimana cara menggunakan laman sesawang ini.",
+            "paragraph-1": "Jika anda terbiasa dengan aplikasi ini, anda boleh tutup tetingkap.",
+            "paragraph-2": "Anda juga boleh membuka tutorial ini bila-bila masa di Tetapan.",
+            "confirm-first-time": "Ini kali pertama saya di sini"
+        },
+        "menu-navigation": {
+            "header": "Ini akan mengemudi anda diantara menu-menu!"
+        },
+        "background-menu": {
+            "header": "Menu Latar Belakang",
+            "select-upload": {
+                "header": "Pilih dan Muatnaik",
+                "paragraph": "Pilih latar belakang dari Project SEKAI atau muatnaik anda punya."
+            },
+            "split": {
+                "header": "Pisahkan Tempat",
+                "paragraph": "Anda juga boleh Pisahkan Tempat, memaparkan dua latar belakang sekaligus."
+            }
+        },
+        "text-menu": {
+            "header": "Menu Teks",
+            "name-tag": {
+                "header": "Teg Nama",
+                "paragraph": "Di sini anda boleh meletakkan nama-nama watak anda.",
+                "easy-switch": {
+                    "header": "Penukaran Pantas",
+                    "paragraph": "Penukaran Pantas membenarkan anda untuk menukar diantara dua watak tanpa menaip semula."
+                }
+            },
+            "dialogue": {
+                "header": "Dialog",
+                "paragraph": "Ini di mana anda boleh meletakkan dialog watak mana yang sedang bercakap."
+            },
+            "scene-text": {
+                "header": "Teks Adengan",
+                "paragraph": "Masa dan tempat adengan yang anda buat, selalunya dilihat pada permulaan setiap cerita PJSK."
+            }
+        },
+        "model-menu": {
+            "header": "Menu Sprite & Model",
+            "selected-layer": {
+                "header": "Lapisan Dipilih",
+                "paragraph": "Semua model yang muncul di karya anda terletak di sini. Anda boleh pilih dan lakukan suaian kecil.",
+                "add-model": {
+                    "header": "Tambah Model",
+                    "paragraph": "Anda boleh menambah model watak Live2D baharu."
+                },
+                "upload-sprite": {
+                    "header": "Muatnaik Sprite PNG",
+                    "paragraph": "Muatnaik anda punya sprite PNG."
+                },
+                "hide-layer": {
+                    "header": null,
+                    "paragraph": null
+                },
+                "remove-layer": {
+                    "header": "Buang Lapisan",
+                    "paragraph": "Padam lapisan yang dipilih."
+                }
+            },
+            "transform": {
+                "header": "Ubah",
+                "paragraph": "Ini akan membenarkan anda untuk gerakkan, ubah saiz dan sembunyikan lapisan yang dipilih."
+            },
+            "character": {
+                "header": "Watak",
+                "paragraph": "Jika model yang dipilih ialah Live2D, anda boleh pilih watak dari PJSK Cast."
+            },
+            "costume": {
+                "header": "Kostum",
+                "paragraph": "Sekali anda telah memilih watak, anda boleh memilih kostum pilihan anda."
+            },
+            "emotion": {
+                "header": "Perasaan",
+                "pose": {
+                    "header": "Gaya",
+                    "paragraph": "Menukar gaya watak yang dipilih."
+                },
+                "expression": {
+                    "header": "Mimik Muka",
+                    "paragraph": "Menukar mimik muka watak yang dipilih."
+                }
+            },
+            "mouth": {
+                "header": "Mulut",
+                "paragraph": "Benarkan anda untuk mengubahsuai pembukaan dan bentuk mulut seorang model Live2D."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "Anda boleh suai gaya anda sendiri dengan mengubah parameter Live2D dan menjedakan animasi endah.",
+                "import-export": {
+                    "header": "Import/Eksport",
+                    "paragraph": "Anda juga boleh menyimpan suaian yang anda lakukan dan muatkan di model lain."
+                },
+                "emotion-copy": {
+                    "header": "Salin Perasaan",
+                    "paragraph": "Menyalin parameter Live2D perasaan semasa dan gaya yang anda tetapkan."
+                }
+            }
+        },
+        "save": {
+            "header": "Setelah siap, jangan lupa simpankan karya anda!",
+            "scene-paragraph": "Ini akan membenarkan anda simpan dan muat seluruh adengan anda sebagai format yang boleh disunting."
+        },
+        "ending": {
+            "header": "Dan itu sahaja!",
+            "paragraph": "Jika anda mahu mengulanginya, anda boleh mengaksesnya semula di Tetapan."
+        }
     }
 }

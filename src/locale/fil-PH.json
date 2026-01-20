@@ -244,11 +244,11 @@
         "audio": "Paganahin ang audio",
         "guidelines": "Ipakita ang guideline",
         "experimental": "Ipakita ang eksperimental",
-        "saveDialog": "Ipakita ang save dialog",
+        "save-dialog": "Ipakita ang save dialog",
         "expand": "Buksan lahat ng opsyon sa menu",
         "tutorial": "Tutorial",
         "show-tutorial": "Ulitin muli",
-        "blankCanvas": "Magsimula sa blangkong canvas"
+        "blank-canvas": "Magsimula sa blangkong canvas"
     },
     "import-export": {
         "header": "Import/Export",
@@ -275,61 +275,119 @@
     },
     "mental-health": {},
     "tutorial": {
-        "initialSetup1": "Ayusin ang slider hanggang wala ka nang makitang pulang kulay.",
-        "initialSetup2": "Maaari mo itong ayusin uli sa Text Menu.",
-        "welcomeHeader": "Musta sa SEKAI Stories!",
-        "welcomeIntroHeader": "Ang bahaging ito ay maggagabay sa'yo kung paano gamitin ang site.",
-        "welcomeIntroParagraph1": "Kung alam mo na paano gamitin ang application na ito, puwede mong isara ito.",
-        "welcomeIntroParagraph2": "Puwede mo itong ulitn ang tutorial sa Settings.",
-        "confirmFirstTime": "Paki simulan",
-        "menuNavigationHeader": "Gamitin ito para lumipat sa mga menu!",
-        "backgroundMenuHeader": "Background Menu",
-        "selectUploadHeader": "Pumili at Mag-upload",
-        "selectUploadParagraph": "Pumili ng background mula sa Project SEKAI o mag-upload ng sarili mong larawan.",
-        "splitLocationHeader": "Hiwalay na lugar",
-        "splitLocationParagraph": "Ipakita ang dalawang background sa isang larawan.",
-        "textMenuHeader": "Text Menu",
-        "nameTagHeader": "Pangalan",
-        "nameTagParagraph": "Dito mo isusulat ang pangalan ng karakter.",
-        "easySwitchHeader": "Madaliang Salitan",
-        "easySwitchParagraph": "Pinapadali ng Madaliang Salitan ang pagpapalit ng karakter nang hindi muling nagta-type.",
-        "dialogueHeader": "Dayalogo",
-        "dialogueParagraph": "Dito mo isusulat ang mga sinasabi ng karakter.",
-        "sceneTextHeader": "Eksena",
-        "sceneTextParagraph": "Oras at lokasyon ng eksenang ginagawa mo.",
-        "modelMenuHeader": "Modelo & Sprites Menu",
-        "selectedLayerHeader": "Napiling Layer",
-        "selectedLayerParagraph": "Makikita rito ang lahat ng modelong nasa gawa mo. Puwede mo silang piliin at baguhin.",
-        "addModelHeader": "Bagong Modelo",
-        "addModelParagraph": "Magdagdag ng bagong Live2D na karakter.",
-        "uploadSpriteHeader": "Mag-upload ng PNG Sprite",
-        "uploadSpriteParagraph": "Mag-upload ng sarili mong PNG sprite gamit ang button.",
-        "hideLayerHeader": "Ipakita",
-        "hideLayerParagraph": "I-toggle kung makikita o hindi ang layer.",
-        "removeLayerHeader": "Tanggalin ang Layer",
-        "removeLayerParagraph": "Tatanggalin ang napiling layer.",
-        "transformHeader": "Pagbago",
-        "transformParagraph": "Puwede mong igalaw, palakihin, paliitin, o itago ang napiling layer..",
-        "characterHeader": "Karakter",
-        "characterParagraph": "Kung ang napiling modelo ay Live2D, maaari kang pumili mula sa mga karakter ng PJSK.",
-        "costumeHeader": "Kasuotan",
-        "costumeParagraph": "Matapos pumili ng karakter, maaari kang pumili ng kasuotan.",
-        "emotionHeader": "Emosyon",
-        "poseHeader": "Posisyon",
-        "poseParagraph": "Baguhin ang posisyon ng napiling karakter.",
-        "expressionHeader": "Ekspresyon",
-        "expressionParagraph": "Baguhin ang ekspresyon sa mukha ng napiling karakter.",
-        "mouthHeader": "Bibig",
-        "mouthParagraph": "Puwede mong baguhin ang hugis at pagbuka ng bibig ng Live2D.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "Puwede mong i-customize ang posisyon gamit ang mga parameter ng Live2D at ihinto ang idle animation.",
-        "importExportHeader": "Import/Export",
-        "importExportParagraph": "Puwede mong i-save ang mga pagbabago at i-load ito sa ibang modelo.",
-        "emotionCopyHeader": "Kopya ng Emosyon",
-        "emotionCopyParagraph": "Kokopyahin ang mga Live2D Parameter ng ekspresyon at posisyon na nilagay mo.",
-        "saveHeader": "Kapag tapos ka na, i-save ang iyong gawa!",
-        "sceneImportExportParagraph": "Puwede mong i-save at i-load ang gawa mo bilang JSON upang ma-edit mo ito uli.",
-        "endHeader": "Iyon lang!",
-        "endParagraph": "Kung gusto mong ulitin ito, maaari mo buksan ito muli sa Settings."
+        "initial-setup": {
+            "paragraph-1": "Ayusin ang slider hanggang wala ka nang makitang pulang kulay.",
+            "paragraph-2": "Maaari mo itong ayusin uli sa Text Menu."
+        },
+        "welcome": {
+            "header": "Musta sa SEKAI Stories!",
+            "intro-header": "Ang bahaging ito ay maggagabay sa'yo kung paano gamitin ang site.",
+            "paragraph-1": "Kung alam mo na paano gamitin ang application na ito, puwede mong isara ito.",
+            "paragraph-2": "Puwede mo itong ulitn ang tutorial sa Settings.",
+            "confirm-first-time": "Paki simulan"
+        },
+        "menu-navigation": {
+            "header": "Gamitin ito para lumipat sa mga menu!"
+        },
+        "background-menu": {
+            "header": "Background Menu",
+            "select-upload": {
+                "header": "Pumili at Mag-upload",
+                "paragraph": "Pumili ng background mula sa Project SEKAI o mag-upload ng sarili mong larawan."
+            },
+            "split": {
+                "header": "Hiwalay na lugar",
+                "paragraph": "Ipakita ang dalawang background sa isang larawan."
+            }
+        },
+        "text-menu": {
+            "header": "Text Menu",
+            "name-tag": {
+                "header": "Pangalan",
+                "paragraph": "Dito mo isusulat ang pangalan ng karakter.",
+                "easy-switch": {
+                    "header": "Madaliang Salitan",
+                    "paragraph": "Pinapadali ng Madaliang Salitan ang pagpapalit ng karakter nang hindi muling nagta-type."
+                }
+            },
+            "dialogue": {
+                "header": "Dayalogo",
+                "paragraph": "Dito mo isusulat ang mga sinasabi ng karakter."
+            },
+            "scene-text": {
+                "header": "Eksena",
+                "paragraph": "Oras at lokasyon ng eksenang ginagawa mo."
+            }
+        },
+        "model-menu": {
+            "header": "Modelo & Sprites Menu",
+            "selected-layer": {
+                "header": "Napiling Layer",
+                "paragraph": "Makikita rito ang lahat ng modelong nasa gawa mo. Puwede mo silang piliin at baguhin.",
+                "add-model": {
+                    "header": "Bagong Modelo",
+                    "paragraph": "Magdagdag ng bagong Live2D na karakter."
+                },
+                "upload-sprite": {
+                    "header": "Mag-upload ng PNG Sprite",
+                    "paragraph": "Mag-upload ng sarili mong PNG sprite gamit ang button."
+                },
+                "hide-layer": {
+                    "header": "Ipakita",
+                    "paragraph": "I-toggle kung makikita o hindi ang layer."
+                },
+                "remove-layer": {
+                    "header": "Tanggalin ang Layer",
+                    "paragraph": "Tatanggalin ang napiling layer."
+                }
+            },
+            "transform": {
+                "header": "Pagbago",
+                "paragraph": "Puwede mong igalaw, palakihin, paliitin, o itago ang napiling layer.."
+            },
+            "character": {
+                "header": "Karakter",
+                "paragraph": "Kung ang napiling modelo ay Live2D, maaari kang pumili mula sa mga karakter ng PJSK."
+            },
+            "costume": {
+                "header": "Kasuotan",
+                "paragraph": "Matapos pumili ng karakter, maaari kang pumili ng kasuotan."
+            },
+            "emotion": {
+                "header": "Emosyon",
+                "pose": {
+                    "header": "Posisyon",
+                    "paragraph": "Baguhin ang posisyon ng napiling karakter."
+                },
+                "expression": {
+                    "header": "Ekspresyon",
+                    "paragraph": "Baguhin ang ekspresyon sa mukha ng napiling karakter."
+                }
+            },
+            "mouth": {
+                "header": "Bibig",
+                "paragraph": "Puwede mong baguhin ang hugis at pagbuka ng bibig ng Live2D."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "Puwede mong i-customize ang posisyon gamit ang mga parameter ng Live2D at ihinto ang idle animation.",
+                "import-export": {
+                    "header": "Import/Export",
+                    "paragraph": "Puwede mong i-save ang mga pagbabago at i-load ito sa ibang modelo."
+                },
+                "emotion-copy": {
+                    "header": "Kopya ng Emosyon",
+                    "paragraph": "Kokopyahin ang mga Live2D Parameter ng ekspresyon at posisyon na nilagay mo."
+                }
+            }
+        },
+        "save": {
+            "header": "Kapag tapos ka na, i-save ang iyong gawa!",
+            "scene-paragraph": "Puwede mong i-save at i-load ang gawa mo bilang JSON upang ma-edit mo ito uli."
+        },
+        "ending": {
+            "header": "Iyon lang!",
+            "paragraph": "Kung gusto mong ulitin ito, maaari mo buksan ito muli sa Settings."
+        }
     }
 }

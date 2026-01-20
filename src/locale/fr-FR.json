@@ -251,9 +251,9 @@
         "expand": "Développer toutes les options de menu",
         "tutorial": "Tutoriel",
         "show-tutorial": "Afficher encore une fois",
-        "mentalHealthWindow": "Afficher l'avertissement sur la santé mentale",
-        "saveDialog": "Afficher la boîte de sauvegarde",
-        "blankCanvas": "Commencer avec un canevas vide"
+        "mental-health-window": "Afficher l'avertissement sur la santé mentale",
+        "save-dialog": "Afficher la boîte de sauvegarde",
+        "blank-canvas": "Commencer avec un canevas vide"
     },
     "import-export": {
         "header": "Importer/Exporter",
@@ -285,61 +285,119 @@
         "settings-details": "Vous pouvez désactiver ce message dans les paramètres."
     },
     "tutorial": {
-        "initialSetup1": "Ajustez le curseur jusqu’à ce que vous ne voyiez plus de taches rouges.",
-        "initialSetup2": "Vous pouvez toujours modifier cela dans le menu Texte.",
-        "welcomeHeader": "Bienvenue dans SEKAI Stories !",
-        "welcomeIntroHeader": "Cette fenêtre vous guidera dans l’utilisation du site.",
-        "welcomeIntroParagraph1": "Si vous connaissez déjà cette application, vous pouvez fermer cette fenêtre.",
-        "welcomeIntroParagraph2": "Vous pouvez aussi rouvrir ce tutoriel à tout moment dans Paramètres.",
-        "confirmFirstTime": "C’est ma première fois ici",
-        "menuNavigationHeader": "Ces boutons permettent de naviguer entre les menus !",
-        "backgroundMenuHeader": "Menu Arrière-plan",
-        "selectUploadHeader": "Sélectionner et uploader",
-        "selectUploadParagraph": "Sélectionnez des arrière-plans de Project SEKAI ou uploader le vôtre.",
-        "splitLocationHeader": "Lieu partagé",
-        "splitLocationParagraph": "Vous pouvez aussi afficher deux lieux dans un seul arrière-plan.",
-        "textMenuHeader": "Menu Texte",
-        "nameTagHeader": "Surnom",
-        "nameTagParagraph": "C’est ici que vous mettez les noms de vos personnages.",
-        "easySwitchHeader": "Changement rapide",
-        "easySwitchParagraph": "Le changement rapide permet de passer d’un personnage à un autre sans retaper.",
-        "dialogueHeader": "Dialogue",
-        "dialogueParagraph": "C’est ici que vous saisissez le dialogue du personnage.",
-        "sceneTextHeader": "Texte de scène",
-        "sceneTextParagraph": "L’heure et le lieu de la scène, généralement affichés au début des histoires PJSK.",
-        "modelMenuHeader": "Menu Modèles & Sprites",
-        "selectedLayerHeader": "Calque sélectionné",
-        "selectedLayerParagraph": "Tous les modèles affichés dans votre travail sont listés ici. Vous pouvez les sélectionner et les ajuster.",
-        "addModelHeader": "Ajouter un modèle",
-        "addModelParagraph": "Vous pouvez ajouter un nouveau personnage Live2D.",
-        "uploadSpriteHeader": "Uploader un sprite PNG",
-        "uploadSpriteParagraph": "Uploader votre propre sprite PNG.",
-        "hideLayerHeader": "Visibilité",
-        "hideLayerParagraph": "Basculez la visibilité du calque.",
-        "removeLayerHeader": "Supprimer un calque",
-        "removeLayerParagraph": "Supprime le calque sélectionné.",
-        "transformHeader": "Transformer",
-        "transformParagraph": "Cela vous permet de déplacer, redimensionner et masquer le calque sélectionné.",
-        "characterHeader": "Personnage",
-        "characterParagraph": "Si le modèle sélectionné est un Live2D, vous pouvez choisir des personnages du casting PJSK.",
-        "costumeHeader": "Costume",
-        "costumeParagraph": "Une fois le personnage sélectionné, choisissez un costume.",
-        "emotionHeader": "Émotion",
-        "poseHeader": "Pose",
-        "poseParagraph": "Change la pose du personnage sélectionné.",
-        "expressionHeader": "Expression",
-        "expressionParagraph": "Change l’expression faciale du personnage sélectionné.",
-        "mouthHeader": "Bouche",
-        "mouthParagraph": "Permet d’ajuster l’ouverture et la forme de la bouche d’un modèle Live2D.",
-        "live2dHeader": "Live2D",
-        "live2dParagraph": "Vous pouvez créer vos propres poses en ajustant les paramètres Live2D et mettre l’animation en pause.",
-        "importExportHeader": "Importer/Exporter",
-        "importExportParagraph": "Vous pouvez sauvegarder vos ajustements et les réutiliser sur un autre modèle.",
-        "emotionCopyHeader": "Copie d’émotion",
-        "emotionCopyParagraph": "Copie les paramètres Live2D de l’expression et de la pose actuelles.",
-        "saveHeader": "Une fois terminé, sauvegardez votre travail !",
-        "sceneImportExportParagraph": "Cela vous permet de sauvegarder et de charger toute la scène dans un format éditable.",
-        "endHeader": "Et voilà !",
-        "endParagraph": "Si vous souhaitez refaire ce tutoriel, vous pourrez le rouvrir dans Paramètres."
+        "initial-setup": {
+            "paragraph-1": "Ajustez le curseur jusqu’à ce que vous ne voyiez plus de taches rouges.",
+            "paragraph-2": "Vous pouvez toujours modifier cela dans le menu Texte."
+        },
+        "welcome": {
+            "header": "Bienvenue dans SEKAI Stories !",
+            "intro-header": "Cette fenêtre vous guidera dans l’utilisation du site.",
+            "paragraph-1": "Si vous connaissez déjà cette application, vous pouvez fermer cette fenêtre.",
+            "paragraph-2": "Vous pouvez aussi rouvrir ce tutoriel à tout moment dans Paramètres.",
+            "confirm-first-time": "C’est ma première fois ici"
+        },
+        "menu-navigation": {
+            "header": "Ces boutons permettent de naviguer entre les menus !"
+        },
+        "background-menu": {
+            "header": "Menu Arrière-plan",
+            "select-upload": {
+                "header": "Sélectionner et uploader",
+                "paragraph": "Sélectionnez des arrière-plans de Project SEKAI ou uploader le vôtre."
+            },
+            "split": {
+                "header": "Lieu partagé",
+                "paragraph": "Vous pouvez aussi afficher deux lieux dans un seul arrière-plan."
+            }
+        },
+        "text-menu": {
+            "header": "Menu Texte",
+            "name-tag": {
+                "header": "Surnom",
+                "paragraph": "C’est ici que vous mettez les noms de vos personnages.",
+                "easy-switch": {
+                    "header": "Changement rapide",
+                    "paragraph": "Le changement rapide permet de passer d’un personnage à un autre sans retaper."
+                }
+            },
+            "dialogue": {
+                "header": "Dialogue",
+                "paragraph": "C’est ici que vous saisissez le dialogue du personnage."
+            },
+            "scene-text": {
+                "header": "Texte de scène",
+                "paragraph": "L’heure et le lieu de la scène, généralement affichés au début des histoires PJSK."
+            }
+        },
+        "model-menu": {
+            "header": "Menu Modèles & Sprites",
+            "selected-layer": {
+                "header": "Calque sélectionné",
+                "paragraph": "Tous les modèles affichés dans votre travail sont listés ici. Vous pouvez les sélectionner et les ajuster.",
+                "add-model": {
+                    "header": "Ajouter un modèle",
+                    "paragraph": "Vous pouvez ajouter un nouveau personnage Live2D."
+                },
+                "upload-sprite": {
+                    "header": "Uploader un sprite PNG",
+                    "paragraph": "Uploader votre propre sprite PNG."
+                },
+                "hide-layer": {
+                    "header": "Visibilité",
+                    "paragraph": "Basculez la visibilité du calque."
+                },
+                "remove-layer": {
+                    "header": "Supprimer un calque",
+                    "paragraph": "Supprime le calque sélectionné."
+                }
+            },
+            "transform": {
+                "header": "Transformer",
+                "paragraph": "Cela vous permet de déplacer, redimensionner et masquer le calque sélectionné."
+            },
+            "character": {
+                "header": "Personnage",
+                "paragraph": "Si le modèle sélectionné est un Live2D, vous pouvez choisir des personnages du casting PJSK."
+            },
+            "costume": {
+                "header": "Costume",
+                "paragraph": "Une fois le personnage sélectionné, choisissez un costume."
+            },
+            "emotion": {
+                "header": "Émotion",
+                "pose": {
+                    "header": "Pose",
+                    "paragraph": "Change la pose du personnage sélectionné."
+                },
+                "expression": {
+                    "header": "Expression",
+                    "paragraph": "Change l’expression faciale du personnage sélectionné."
+                }
+            },
+            "mouth": {
+                "header": "Bouche",
+                "paragraph": "Permet d’ajuster l’ouverture et la forme de la bouche d’un modèle Live2D."
+            },
+            "live-2d": {
+                "header": "Live2D",
+                "paragraph": "Vous pouvez créer vos propres poses en ajustant les paramètres Live2D et mettre l’animation en pause.",
+                "import-export": {
+                    "header": "Importer/Exporter",
+                    "paragraph": "Vous pouvez sauvegarder vos ajustements et les réutiliser sur un autre modèle."
+                },
+                "emotion-copy": {
+                    "header": "Copie d’émotion",
+                    "paragraph": "Copie les paramètres Live2D de l’expression et de la pose actuelles."
+                }
+            }
+        },
+        "save": {
+            "header": "Une fois terminé, sauvegardez votre travail !",
+            "scene-paragraph": "Cela vous permet de sauvegarder et de charger toute la scène dans un format éditable."
+        },
+        "ending": {
+            "header": "Et voilà !",
+            "paragraph": "Si vous souhaitez refaire ce tutoriel, vous pourrez le rouvrir dans Paramètres."
+        }
     }
 }

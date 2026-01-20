@@ -59,23 +59,23 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 0 && (
                 <Window
                     show={show}
-                    confirmLabel={t("tutorial.confirmFirstTime")}
+                    confirmLabel={t("tutorial.welcome.confirm-first-time")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                 >
                     <div className="window__content">
                         <h1 className="text-center">
-                            {t("tutorial.welcomeHeader")}
+                            {t("tutorial.welcome.header")}
                         </h1>
                         <div className="window__divider">
                             <h2 className="text-center">
-                                {t("tutorial.welcomeIntroHeader")}
+                                {t("tutorial.welcome.intro-header")}
                             </h2>
                             <p className="text-center">
-                                {t("tutorial.welcomeIntroParagraph1")}
+                                {t("tutorial.welcome.paragraph-1")}
                             </p>
                             <p className="text-center">
-                                {t("tutorial.welcomeIntroParagraph2")}
+                                {t("tutorial.welcome.paragraph-2")}
                             </p>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                 >
                     <div className="window__content">
                         <h1 className="text-center">
-                            {t("tutorial.menuNavigationHeader")}
+                            {t("tutorial.menu-navigation.header")}
                         </h1>
                         <div className="window__divider center padding-top-bottom-10">
                             <img
@@ -114,7 +114,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                     <div className="window__content">
                         <h1 className="text-center">
                             <i className="sidebar__select bi bi-card-image"></i>{" "}
-                            {t("tutorial.backgroundMenuHeader")}
+                            {t("tutorial.background-menu.header")}
                         </h1>
                         <div className="window__divider center padding-top-bottom-10">
                             <img
@@ -124,8 +124,8 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             />
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.selectUploadHeader")}</h2>
-                            <p>{t("tutorial.selectUploadParagraph")}</p>
+                            <h2>{t("tutorial.background-menu.select-upload.header")}</h2>
+                            <p>{t("tutorial.background-menu.select-upload.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu2-1.png"
@@ -135,8 +135,8 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             </div>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.splitLocationHeader")}</h2>
-                            <p>{t("tutorial.splitLocationParagraph")}</p>
+                            <h2>{t("tutorial.background-menu.split.header")}</h2>
+                            <p>{t("tutorial.background-menu.split.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu2-2.png"
@@ -159,7 +159,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                     <div className="window__content">
                         <h1 className="text-center">
                             <i className="sidebar__select bi bi-chat"></i>{" "}
-                            {t("tutorial.textMenuHeader")}
+                            {t("tutorial.text-menu.header")}
                         </h1>
                         <div className="window__divider center padding-top-bottom-10">
                             <img
@@ -169,14 +169,14 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             />
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.nameTagHeader")}</h2>
-                            <p>{t("tutorial.nameTagParagraph")}</p>
-                            <h3>{t("tutorial.easySwitchHeader")}</h3>
-                            <p>{t("tutorial.easySwitchParagraph")}</p>
+                            <h2>{t("tutorial.text-menu.name-tag.header")}</h2>
+                            <p>{t("tutorial.text-menu.name-tag.paragraph")}</p>
+                            <h3>{t("tutorial.text-menu.name-tag.easy-switch.header")}</h3>
+                            <p>{t("tutorial.text-menu.name-tag.easy-switch.paragraph")}</p>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.dialogueHeader")}</h2>
-                            <p>{t("tutorial.dialogueParagraph")}</p>
+                            <h2>{t("tutorial.text-menu.dialogue.header")}</h2>
+                            <p>{t("tutorial.text-menu.dialogue.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu3-1.png"
@@ -186,8 +186,8 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             </div>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.sceneTextHeader")}</h2>
-                            <p>{t("tutorial.sceneTextParagraph")}</p>
+                            <h2>{t("tutorial.text-menu.scene-text.header")}</h2>
+                            <p>{t("tutorial.text-menu.scene-text.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu3-2.png"
@@ -210,7 +210,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                     <div className="window__content">
                         <h1 className="text-center">
                             <i className="sidebar__select bi bi-person-fill"></i>{" "}
-                            {t("tutorial.modelMenuHeader")}
+                            {t("tutorial.model-menu.header")}
                         </h1>
                         <div className="window__divider center padding-top-bottom-10">
                             <img
@@ -220,23 +220,23 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             />
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.selectedLayerHeader")}</h2>
-                            <p>{t("tutorial.selectedLayerParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.selected-layer.header")}</h2>
+                            <p>{t("tutorial.model-menu.selected-layer.paragraph")}</p>
                             <h3>
                                 <i className="bi bi-plus-circle" />{" "}
-                                {t("tutorial.addModelHeader")}
+                                {t("tutorial.model-menu.selected-layer.add-model.header")}
                             </h3>
-                            <p>{t("tutorial.addModelParagraph")}</p>
+                            <p>{t("tutorial.model-menu.selected-layer.add-model.paragraph")}</p>
                             <h3>
                                 <i className="bi bi-eye" />{" "}
-                                {t("tutorial.hideLayerHeader")}
+                                {t("tutorial.model-menu.selected-layer.hide-layer.header")}
                             </h3>
-                            <p>{t("tutorial.hideLayerParagraph")}</p>
+                            <p>{t("tutorial.model-menu.selected-layer.hide-layer.paragraph")}</p>
                             <h3>
                                 <i className="bi bi-x-circle" />{" "}
-                                {t("tutorial.removeLayerHeader")}
+                                {t("tutorial.model-menu.selected-layer.remove-layer.header")}
                             </h3>
-                            <p>{t("tutorial.removeLayerParagraph")}</p>
+                            <p>{t("tutorial.model-menu.selected-layer.remove-layer.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu4-1.png"
@@ -246,23 +246,23 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             </div>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.transformHeader")}</h2>
-                            <p>{t("tutorial.transformParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.transform.header")}</h2>
+                            <p>{t("tutorial.model-menu.transform.paragraph")}</p>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.characterHeader")}</h2>
-                            <p>{t("tutorial.characterParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.character.header")}</h2>
+                            <p>{t("tutorial.model-menu.character.paragraph")}</p>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.costumeHeader")}</h2>
-                            <p>{t("tutorial.costumeParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.costume.header")}</h2>
+                            <p>{t("tutorial.model-menu.costume.paragraph")}</p>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.emotionHeader")}</h2>
-                            <h3>{t("tutorial.poseHeader")}</h3>
-                            <p>{t("tutorial.poseParagraph")}</p>
-                            <h3>{t("tutorial.expressionHeader")}</h3>
-                            <p>{t("tutorial.expressionParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.emotion.header")}</h2>
+                            <h3>{t("tutorial.model-menu.emotion.pose.header")}</h3>
+                            <p>{t("tutorial.model-menu.emotion.pose.paragraph")}</p>
+                            <h3>{t("tutorial.model-menu.emotion.expression.header")}</h3>
+                            <p>{t("tutorial.model-menu.emotion.expression.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu4-2.png"
@@ -272,14 +272,14 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                             </div>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.mouthHeader")}</h2>
-                            <p>{t("tutorial.mouthParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.mouth.header")}</h2>
+                            <p>{t("tutorial.model-menu.mouth.paragraph")}</p>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("tutorial.live2dHeader")}</h2>
-                            <p>{t("tutorial.live2dParagraph")}</p>
-                            <h3>{t("tutorial.importExportHeader")}</h3>
-                            <p>{t("tutorial.importExportParagraph")}</p>
+                            <h2>{t("tutorial.model-menu.live-2d.header")}</h2>
+                            <p>{t("tutorial.model-menu.live-2d.paragraph")}</p>
+                            <h3>{t("tutorial.model-menu.live-2d.import-export.header")}</h3>
+                            <p>{t("tutorial.model-menu.live-2d.import-export.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu4-3.png"
@@ -287,8 +287,8 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                                     alt=""
                                 />
                             </div>
-                            <h3>{t("tutorial.emotionCopyHeader")}</h3>
-                            <p>{t("tutorial.emotionCopyParagraph")}</p>
+                            <h3>{t("tutorial.model-menu.live-2d.emotion-copy.header")}</h3>
+                            <p>{t("tutorial.model-menu.live-2d.emotion-copy.paragraph")}</p>
                             <div className="window__divider center">
                                 <img
                                     src="/img/menu4-4.png"
@@ -310,7 +310,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                 >
                     <div className="window__content">
                         <h1 className="text-center">
-                            {t("tutorial.saveHeader")}
+                            {t("tutorial.save.header")}
                         </h1>
                         <div className="window__divider center padding-top-bottom-10">
                             <img
@@ -322,9 +322,9 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                         <div className="window__divider">
                             <h2>
                                 <i className="bi bi-braces" />{" "}
-                                {t("tutorial.importExportHeader")}
+                                {t("import-export.header")}
                             </h2>
-                            <p>{t("tutorial.sceneImportExportParagraph")}</p>
+                            <p>{t("tutorial.save.scene-paragraph")}</p>
                         </div>
                     </div>
                 </Window>
@@ -333,11 +333,11 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
                 <Window show={show}>
                     <div className="window__content">
                         <h1 className="text-center">
-                            {t("tutorial.endHeader")}
+                            {t("tutorial.ending.header")}
                         </h1>
                         <div className="window__divider center flex-vertical">
                             <p className="text-center">
-                                {t("tutorial.endParagraph")}
+                                {t("tutorial.ending.paragraph")}
                             </p>
                             <img
                                 className="center"
