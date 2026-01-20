@@ -47,11 +47,11 @@
             "flashback": "Alaala",
             "sick": "Nahihilo",
             "drooping-lines": "Pagkabahala",
-            "pov": null,
+            "pov": "POV",
             "pov-settings": {
-                "zoom": null,
-                "povx": null,
-                "povy": null
+                "zoom": "Zoom",
+                "povx": "X-Posisyon",
+                "povy": "Y-Posisyon"
             }
         }
     },
@@ -177,7 +177,10 @@
         "ko-fi-details": "Opsyonal ang mga donasyon! Dito rin ako nagbibigay ng mga updates para sa website!.",
         "github-details": "Ang proyektong ito ay open-source! Maaari kang mag-report ng issue o magpadala ng pull request para tumulong!",
         "special-thanks-header": "Espesyal na Pasasalamat",
-        "special-thanks-description": "Lubos kong pinasasalamatan ang may-ari ng Sekai Viewer sa pagbibigay ng access sa kanilang mga modelo sa site na ito!"
+        "special-thanks-description": "Lubos kong pinasasalamatan ang may-ari ng Sekai Viewer sa pagbibigay ng access sa kanilang mga modelo sa site na ito!",
+        "report-details": "Kapag may nakita kang bug or glitch, paki-report ito sa aming GitHub Repository",
+        "report-header": "Nakahanap ka ba ng bug?",
+        "report-button": "Mag-report ng issue"
     },
     "loadings": {
         "please-wait": "Maghintay...",
@@ -232,7 +235,8 @@
         "ln": "Leo/need",
         "vs": "VIRTUAL SINGER",
         "split": "Hiwalay na Lugar",
-        "temp": "Iba pa"
+        "temp": "Iba pa",
+        "cards": "Mga cards"
     },
     "settings": {
         "header": "Settings",
@@ -248,7 +252,9 @@
         "expand": "Buksan lahat ng opsyon sa menu",
         "tutorial": "Tutorial",
         "show-tutorial": "Ulitin muli",
-        "blank-canvas": "Magsimula sa blangkong canvas"
+        "blank-canvas": "Magsimula sa blangkong canvas",
+        "announcement": "Ipakita ang announcement",
+        "mental-health-window": "Ipakita ang mental health window"
     },
     "import-export": {
         "header": "Import/Export",
@@ -273,7 +279,12 @@
         "background-bookmark": "Hindi puwede i-bookmark ang custom na likuran.",
         "hide-everything-warning": "Ang \"Itago ang mga modelo at dayalogo\" na opsyon sa Eksena ay naka-enable.\nPaki disable itong opyson sa Text Menu."
     },
-    "mental-health": {},
+    "mental-health": {
+        "button": "Gusto ko ng tulong...",
+        "header": "Okay lang humingi ng tulong",
+        "details": "Mahalaga ang nararamdaman mo at hindi ka nag-iisa. Kung ikaw ay may pinagdadaanan, maaaring mong i-click ang button sa ibaba upang makahanap ng mga taong handang tumulong para sayo.",
+        "settings-details": "Maaari mong i-disable ang window na ito sa Settings."
+    },
     "tutorial": {
         "initial-setup": {
             "paragraph-1": "Ayusin ang slider hanggang wala ka nang makitang pulang kulay.",
