@@ -4,11 +4,11 @@ import pl from "../locale/pl-PL.json";
 import zh from "../locale/zh-CN.json";
 import es from "../locale/es-ES.json";
 import fil from "../locale/fil-PH.json";
-import ms from '../locale/ms-MY.json';
-import fr from '../locale/fr-FR.json';
-import th from '../locale/th-TH.json';
-import zhTW from '../locale/zh-TW.json';
-import zhHK from '../locale/zh-HK.json';
+import ms from "../locale/ms-MY.json";
+import fr from "../locale/fr-FR.json";
+import th from "../locale/th-TH.json";
+import zhTW from "../locale/zh-TW.json";
+import zhHK from "../locale/zh-HK.json";
 
 export const languageNames = {
     en: "English",
@@ -16,16 +16,15 @@ export const languageNames = {
     fr: "Français",
     zh: "简体中文",
     zhTW: "繁體中文",
-	zhHK: "港式廣東話",
+    zhHK: "港式廣東話",
     fil: "Filipino",
     ms: "Bahasa Melayu",
     th: "ไทย",
-    pl: "Polski (incomplete)",
-    
+    pl: "Polski",
 };
 
 export const handleChangeLanguage = async (
-    event: React.ChangeEvent<HTMLSelectElement>
+    event: React.ChangeEvent<HTMLSelectElement>,
 ) => {
     const languangeToChange = event.target.value;
 
@@ -47,7 +46,7 @@ const i18nInit = () => {
             fr: { translation: fr },
             th: { translation: th },
             zhTW: { translation: zhTW },
-			zhHK: { translation: zhHK },
+            zhHK: { translation: zhHK },
         },
         fallbackLng: "en",
     });

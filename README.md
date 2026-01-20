@@ -23,6 +23,7 @@ A huge thanks to our translators!
 [<img src="https://avatars.githubusercontent.com/u/117494034?v=4" width="50">](https://github.com/aungpaos)
 [<img src="https://avatars.githubusercontent.com/u/59890180?v=4" width="50">](https://github.com/39Choko)
 [<img src="https://avatars.githubusercontent.com/u/67418738?v=4" width="50">](https://github.com/lmaodick1239)
+[<img src="https://avatars.githubusercontent.com/u/77572452?v=4" width="50">](https://github.com/KrajeQQ)
 
 
 ## Features
