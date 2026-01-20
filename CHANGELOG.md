@@ -1,7 +1,13 @@
 # 5.9.4
-Release date: January 15, 2026
+Release date: January 20, 2026
 - Added setting for re-showing the notice announcement
 - Fixed enter-value locale translation
+- Removed experimental and guideline options
+- Added option to re-show the notice announcement
+- Redesigned the Error Boundary Screen
+- Make loading icon jump when reaching 80%
+- Refactored tutorial locale
+- Updated Polish Translation
 
 # 5.9.3
 Release date: January 10, 2026
