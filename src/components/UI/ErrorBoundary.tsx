@@ -33,18 +33,18 @@ export function ErrorFallback({ error }: { error: Error }) {
         a.remove();
     };
     const message = `
-    System Information:
-    User Agent: ${navigator.userAgent}
-    Platform: ${navigator.platform}
+        System Information:
+        User Agent: ${navigator.userAgent}
+        Platform: ${navigator.platform}
 
-    Traceback:
-    ${error.stack}
+        Traceback:
+        ${error.stack}
 
-    Message:
-    ${error.message}
+        Message:
+        ${error.message}
     `
         .trim()
-        .replace(/^ {4}/gm, "");
+        .replace(/^ {8}/gm, "");
 
     return (
         <div className="app-en center flex-vertical full-screen padding-20">

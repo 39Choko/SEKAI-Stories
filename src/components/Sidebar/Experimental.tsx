@@ -1,14 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SceneContext } from "../../contexts/SceneContext";
 import { SoftErrorContext } from "../../contexts/SoftErrorContext";
 import { SettingsContext } from "../../contexts/SettingsContext";
+
+const Crash: React.FC = () => {
+    throw new Error("Can you hear the ominous bells tolling?");
+    return <></>;
+};
 
 const Experimental: React.FC = () => {
     const { i18n } = useTranslation();
     const scene = useContext(SceneContext);
     const settings = useContext(SettingsContext);
     const softError = useContext(SoftErrorContext);
+    const [crash, setCrash] = useState(false);
 
     if (!scene || !softError || !settings) throw new Error("Context not found");
     const { setErrorInformation } = softError;
@@ -71,6 +77,15 @@ const Experimental: React.FC = () => {
                     >
                         Soft error
                     </button>
+                    <button
+                        className="btn-regular btn-100 btn-red"
+                        onClick={() => {
+                            setCrash(true);
+                        }}
+                    >
+                        CRASH
+                    </button>
+                    {crash && <Crash />}
                 </div>
             </div>
         </div>
