@@ -1,3 +1,10 @@
+# 5.9.5
+Release date: January 21, 2026
+- Updated Thai Translation
+- Added few flavor texts lines
+- Made idle animation disabled as default
+- Replaced Live2D issue message
+
 # 5.9.4
 Release date: January 20, 2026
 - Added setting for re-showing the notice announcement
@@ -8,6 +15,7 @@ Release date: January 20, 2026
 - Make loading icon jump when reaching 80%
 - Refactored tutorial locale
 - Updated Polish Translation
+- Updated Filipino Translation
 
 # 5.9.3
 Release date: January 10, 2026
