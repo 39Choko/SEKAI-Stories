@@ -136,7 +136,7 @@ const randomText = {
         "愛莉掉了她的牙齒",
         "setsuna已經被叫成kanade1888次了",
         "瑞希看起來毫無精神呢。", // Change this after Nov 30, 2025
-        "ReferenceError: mizuki 未下定義", // Change this after Nov 30, 2025. Original: 瑞希離你家18公里遠了
+        "瑞希離你家18公里遠了",
         "真冬只顧著吃魷魚。", // Change this after Nov 30, 2025
         "繪名在找某人。", // Change this after Nov 30, 2025
         "ena姐：杜絕AIGC從你我做起",
@@ -158,7 +158,7 @@ const randomText = {
         "無題.",
         "我繪我名",
         "是唸「デコ　ニナ」啦！",
-        // "瑞繪99", // Uncomment after Nov 30, 2025
+        "瑞繪99",
     ],
 
     zhHK: [] as string[],
@@ -170,6 +170,7 @@ const FlavorText: React.FC = () => {
     const lng = i18n.language as keyof typeof randomText;
 
     randomText["zhHK"] = randomText["zhTW"];
+
     useEffect(() => {
         const languageRandomText = randomText[lng]
             ? randomText[lng]
@@ -177,7 +178,7 @@ const FlavorText: React.FC = () => {
         setText(
             languageRandomText[
                 Math.floor(Math.random() * languageRandomText.length)
-            ]
+            ],
         );
     }, [lng]);
     return <p id="flavor-text">{text}</p>;
