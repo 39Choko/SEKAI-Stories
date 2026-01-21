@@ -22,7 +22,7 @@ interface CharacterProps {
     handleLive2DChange: (callback: () => void) => void;
     prepareModel: (
         character: string,
-        model: string | ILive2DModelList
+        model: string | ILive2DModelList,
     ) => Promise<[Live2DModel, ILive2DModelData]>;
     updateModelState: (updates: Partial<IModel>) => void;
 }
@@ -69,7 +69,7 @@ const Character: React.FC<CharacterProps> = ({
 
             if (!characterData || characterData.length === 0) {
                 setErrorInformation(
-                    "No models found for the selected character."
+                    "No models found for the selected character.",
                 );
                 throw new Error("No models found for the selected character.");
             }
@@ -80,7 +80,7 @@ const Character: React.FC<CharacterProps> = ({
 
             const [live2DModel, modelData] = await prepareModel(
                 character,
-                firstFile
+                firstFile,
             );
 
             updateModelState({
@@ -94,7 +94,7 @@ const Character: React.FC<CharacterProps> = ({
                     : (firstFile as ILive2DModelList).modelBase,
                 modelData,
                 visible: true,
-                idle: true,
+                idle: false,
                 modelX: initialState ? 640 : currentModel?.modelX,
                 modelY: initialState ? 870 : currentModel?.modelY,
                 modelScale: initialState ? 0.5 : currentModel?.modelScale,
@@ -143,7 +143,7 @@ const Character: React.FC<CharacterProps> = ({
                     Object.keys(
                         currentModel?.from === "static"
                             ? staticCharacterData
-                            : sekaiCharacterData
+                            : sekaiCharacterData,
                     ).map((character) => (
                         <option key={character} value={character}>
                             {t(`character.${character}`)}

@@ -41,7 +41,7 @@ interface CostumeProps {
     handleLive2DChange: (callback: () => void) => void;
     prepareModel: (
         character: string,
-        model: string | ILive2DModelList
+        model: string | ILive2DModelList,
     ) => Promise<[Live2DModel, ILive2DModelData]>;
     updateModelState: (updates: Partial<IModel>) => void;
 }
@@ -82,26 +82,26 @@ const Costume: React.FC<CostumeProps> = ({
             if (isStatic) {
                 [live2DModel, modelData] = await prepareModel(
                     currentModel.character,
-                    modelBase
+                    modelBase,
                 );
             } else {
                 const model = await GetCharacterDataFromSekai(
                     currentSelectedCharacter,
-                    modelBase
+                    modelBase,
                 );
 
                 if (!model) {
                     setErrorInformation(
-                        `No model found for ${modelBase} in sekai data`
+                        `No model found for ${modelBase} in sekai data`,
                     );
                     throw new Error(
-                        `No model found for ${modelBase} in sekai data`
+                        `No model found for ${modelBase} in sekai data`,
                     );
                 }
 
                 [live2DModel, modelData] = await prepareModel(
                     currentModel.character,
-                    model
+                    model,
                 );
             }
 
@@ -114,7 +114,7 @@ const Costume: React.FC<CostumeProps> = ({
                 modelName: modelBase,
                 modelData: modelData,
                 visible: true,
-                idle: true,
+                idle: false,
                 parametersChanged: {},
                 from:
                     currentModel.from === "upload"
@@ -138,7 +138,7 @@ const Costume: React.FC<CostumeProps> = ({
             currentModel.model as Live2DModel,
             currentKey,
             app as PIXI.Application,
-            value
+            value,
         );
 
         if (value && currentModel?.model) {

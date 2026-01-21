@@ -76,7 +76,7 @@ const ModelSidebar: React.FC = () => {
         (() => void) | undefined
     >(undefined);
     const [bookmarkEmotions, setBookmarkEmotion] = useState<IEmotionBookmark>(
-        {}
+        {},
     );
     const [nameEmotions, setNameEmotions] = useState<IEmotionName>({});
 
@@ -92,7 +92,7 @@ const ModelSidebar: React.FC = () => {
         if (currentModel?.model instanceof Live2DModel && !isLoading) {
             setCoreModel(
                 currentModel.model.internalModel
-                    .coreModel as Cubism4InternalModel["coreModel"]
+                    .coreModel as Cubism4InternalModel["coreModel"],
             );
         } else {
             setCoreModel(null);
@@ -101,7 +101,7 @@ const ModelSidebar: React.FC = () => {
 
     useEffect(() => {
         const bookmarkEmotionsCookie = localStorage.getItem(
-            "bookmarkEmotionsCookie"
+            "bookmarkEmotionsCookie",
         );
         const bookmarkEmotionsJson = bookmarkEmotionsCookie
             ? JSON.parse(bookmarkEmotionsCookie)
@@ -123,7 +123,7 @@ const ModelSidebar: React.FC = () => {
     const prepareModel = useCallback(
         async (
             character: string,
-            model: string | ILive2DModelList
+            model: string | ILive2DModelList,
         ): Promise<[Live2DModel, ILive2DModelData]> => {
             if (!currentModel) throw new Error("No current model selected!");
             setLoading(0);
@@ -146,21 +146,29 @@ const ModelSidebar: React.FC = () => {
                 (x) => {
                     return x * 20;
                 },
-                signal
+                signal,
             );
 
             if (signal.aborted) throw new Error("Operation canceled.");
 
             const bounds = live2DModel.getLocalBounds();
+            if (
+                live2DModel instanceof Live2DModel &&
+                "breath" in live2DModel.internalModel
+            ) {
+                const modelBreath = live2DModel.internalModel
+                    .breath as Cubism4InternalModel["breath"];
+                modelBreath.setParameters([]);
+            }
             currentModel.root.removeChildren();
             currentModel.root.addChildAt(live2DModel, 0);
             currentModel.root.pivot.set(bounds.width / 2, bounds.height / 2);
             currentModel.root.scale.set(
-                initialState ? 0.5 : currentModel?.modelScale
+                initialState ? 0.5 : currentModel?.modelScale,
             );
             currentModel.root.position.set(
                 initialState ? 640 : currentModel?.modelX,
-                initialState ? 870 : currentModel?.modelY
+                initialState ? 870 : currentModel?.modelY,
             );
 
             setLoading(100);
@@ -168,7 +176,7 @@ const ModelSidebar: React.FC = () => {
 
             return [live2DModel, modelData];
         },
-        [currentModel, currentKey, modelWrapper]
+        [currentModel, currentKey, modelWrapper],
     );
 
     if (!models) return <p>{t("please-wait")}</p>;
@@ -373,7 +381,7 @@ const ModelSidebar: React.FC = () => {
                             value={JSON.stringify(
                                 currentModel?.parametersChanged,
                                 null,
-                                2
+                                2,
                             )}
                             readOnly
                         ></textarea>
