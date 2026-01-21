@@ -1,5 +1,4 @@
-import { t } from "i18next";
-import React from "react";
+import React, { useState } from "react";
 
 interface Live2DIssueProps {
     costume: string;
@@ -15,33 +14,35 @@ const costumeIssueList: string[] = [
 const costumeCorruptedList: string[] = ["20mizuki_culture"];
 
 const Live2DIssue: React.FC<Live2DIssueProps> = ({ costume }) => {
+    const [ignoreLive2DIssue, setIgnoreLive2DIssue] = useState<boolean>(
+        localStorage.getItem("ignoreLive2DIssue") === "true",
+    );
     const hasIssue = costumeIssueList.some((pattern) =>
-        new RegExp(pattern, "i").test(costume)
+        new RegExp(pattern, "i").test(costume),
     );
-    const isCorrupted = costumeCorruptedList.some((pattern) =>
-        new RegExp(`^${pattern}$`).test(costume)
-    );
+    const isCorrupted = costumeCorruptedList.includes(costume);
+    const handleIgnore = () => {
+        localStorage.setItem("ignoreLive2DIssue", "true");
+        setIgnoreLive2DIssue(true);
+    };
 
     return (
         <>
-            {hasIssue && (
-                <div>
+            {hasIssue && !ignoreLive2DIssue && (
+                <div onClick={handleIgnore}>
                     <p>
-                        <i className="bi bi-exclamation-circle-fill blue" />{" "}
-                        {t("model.costume.live2d-issue")}
+                        <i className="bi bi-info-circle-fill blue" /> This model
+                        has previously been reported having missing parts. If
+                        you are still experiencing this issue, please report
+                        this on GitHub.
                     </p>
-                    <a
-                        href="https://github.com/lezzthanthree/SEKAI-Stories/issues/20"
-                        target="_blank"
-                    >
-                        <p>{t("model.costume.live2d-issue-github")}</p>
-                    </a>
+                    <p>You can ignore this message by clicking/tapping.</p>
                 </div>
             )}
             {isCorrupted && (
                 <div>
                     <p>
-                        <i className="bi bi-exclamation-circle-fill blue" />{" "}
+                        <i className="bi bi-exclamation-triangle-fill red" />{" "}
                         This costume is corrupted or unfinished work from the
                         source.
                     </p>

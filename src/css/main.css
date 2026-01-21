@@ -662,8 +662,16 @@ select:disabled {
   outline: 4px solid #77eedd;
 }
 
-.blue {
+.pink {
   color: #ff77ac;
+}
+
+.red {
+  color: #ff2b2b;
+}
+
+.blue {
+  color: #00ccbb;
 }
 
 #content {
