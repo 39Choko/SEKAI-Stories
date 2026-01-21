@@ -22,48 +22,25 @@ const Announcements: React.FC = () => {
     return (
         <div id="announcements" onClick={handleAnnouncements}>
             <h2>Notice</h2>
-            <p>
-                The issue regarding the missing parts on certain characters has
-                been fixed!
-            </p>
-            <p>
-                If the issue still persists, please consider refreshing your
-                browser or clearing your cookies.
-            </p>
-            <p>
-                Please consider contributing to the discussion on this{" "}
-                <a
-                    href="https://github.com/lezzthanthree/SEKAI-Stories/issues/20"
-                    target="_blank"
-                >
-                    GitHub issue
-                </a>{" "}
-                or on this{" "}
-                <a href="https://redd.it/1q5705d" target="_blank">
-                    Reddit post
-                </a>{" "}
-                to let us know if the problem is resolved or remains ongoing.
-                Your feedback is greatly appreciated!
-            </p>
-            <button
-                className="btn-blue btn-regular"
-                onClick={() => {
-                    window.open(
-                        "https://github.com/lezzthanthree/SEKAI-Stories/issues/20",
-                        "_blank"
-                    );
-                }}
-            >
-                GitHub Issue
-            </button>{" "}
-            <button
-                className="btn-blue btn-regular"
-                onClick={() => {
-                    window.open("https://redd.it/1q5705d", "_blank");
-                }}
-            >
-                Reddit Post
-            </button>
+            <p>A few minor updates have been done.</p>
+            <ul>
+                <li>Idle Animation is now disabled by default.</li>
+                <li>
+                    Added a toggle to show the notice announcement on
+                    Settings.
+                </li>
+                <li>
+                    Removed the guidelines and experimental toggle on Settings.
+                </li>
+                <li>
+                    Replaced the Live2D issue message on certain models. This
+                    can be removed by just tapping or clicking.
+                </li>
+                <li>
+                    Updated Thai, Polish, and Filipino translations
+                </li>
+            </ul>
+            <p>With the recent update of MYSEKAI, I am currently planning to make a textbox variant for this!</p>
             <p>Tap this section to close.</p>
         </div>
     );
