@@ -168,6 +168,7 @@ const FlavorText: React.FC = () => {
     const { i18n } = useTranslation();
     const lng = i18n.language as keyof typeof randomText;
 
+    randomText["zhHK"] = randomText["zhTW"];
     useEffect(() => {
         const languageRandomText = randomText[lng]
             ? randomText[lng]
