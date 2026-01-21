@@ -31,7 +31,7 @@ const randomText = {
         "Akito is spotted unconscious after eating Ena's favorite cheesecake.",
         "ABSOLUTE CINEMA",
         "The Disapperance of Hatsune Miku",
-        "Listening to / / // / /",
+        "Listening to その音が鳴るなら",
         "Do not overdose yourself with shipping~",
         "Please take only the recommended shipping dosage.",
         "Just Monika.",
@@ -47,6 +47,7 @@ const randomText = {
         "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
         "It's pronounced 'DEKO-NINA'.",
         "saa anyo anyo kocchi oide",
+        "Burn Your Dread.",
         "Bonds of people is the true power.",
         "Untitled.",
     ],
@@ -183,7 +184,7 @@ const FlavorText: React.FC = () => {
 export default FlavorText;
 
 /* 
-    LAST UPDATE: 12/11/2025
+    LAST UPDATE: 01/21/2026
     Will not list the obvious PJSK references.
     Placed here for people who needs explaination when translating.
 
@@ -208,8 +209,6 @@ export default FlavorText;
     "Come here, Mafuyu-chan."
         -> A popular Akito/Mafuyu ship fanfic
         -> https://old.reddit.com/r/ProjectSekai/comments/11j0ih2/come_here_mafuyuchan/jb363p0/
-    "Listening to / / // / /"
-        -> x0o0x's song about Kisaragi Station
     "Do not overdose yourself with shipping~"
         -> Needy Streamer Overload reference.
     "Please take only the recommended shipping dosage."
@@ -227,6 +226,8 @@ export default FlavorText;
         -> lezzthanthree's Love Live! SIFAS Story Generator
     "It's pronounced 'DEKO-NINA'."
         -> DECO*27
+    "Burn Your Dread.",
+        -> A Reference to Persona 3 Songs: "Burn My Dread" and "Full Moon Full Life"
     "Bonds of people is the true power.",
         -> A Reference to Persona 4 Animation ED 1: "Beauty of Destiny"
 */
