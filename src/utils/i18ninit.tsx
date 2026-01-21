@@ -11,16 +11,16 @@ import zhTW from "../locale/zh-TW.json";
 import zhHK from "../locale/zh-HK.json";
 
 export const languageNames = {
-    en: "English",
-    es: "Español",
-    fr: "Français",
-    zh: "简体中文",
-    zhTW: "繁體中文",
-    zhHK: "港式廣東話",
-    fil: "Filipino",
-    ms: "Bahasa Melayu",
-    th: "ไทย",
-    pl: "Polski",
+    en: "English (en-US)",
+    es: "Español (es-ES)",
+    fr: "Français (fr-FR)",
+    zh: "简体中文 (zh-CN)",
+    zhTW: "繁體中文 (zh-TW)",
+    zhHK: "港式廣東話 (zh-HK)",
+    fil: "Filipino (fil-PH)",
+    ms: "Bahasa Melayu (ms-MY)",
+    th: "ไทย (th-TH)",
+    pl: "Polski (pl-PL)",
 };
 
 export const handleChangeLanguage = async (
