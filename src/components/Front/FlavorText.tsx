@@ -73,11 +73,12 @@ const randomText = {
         "Maniniwala ba kayo na isang Filipino si An?", // TL Note: Sumi Tomomi Jiena is half-Filipino
         "BALITA: Isang estudyante nangangalang Akito, dead on the spot matapos kainin ang keyk ng kanyang kapatid.",
         "Si Mizuki lamang.",
-        "Totoo ang MizuEna.",
-        "Totoo ang AnHane.",
-        "Totoo ang MinoHaru.",
+        "Mabuhay ang MizuEna.", // A parody on the massive AlDub Cult "Mabuhay ang AlDub"
+        "Mabuhay ang AnHane.", // A parody on the massive AlDub Cult "Mabuhay ang AlDub"
+        "Mabuhay ang MinoHaru.", // A parody on the massive AlDub Cult "Mabuhay ang AlDub"
         "WANDERHOY!",
         "UY PILIPINS.",
+        "?lat=15.779313780199093 &lng=119.98590787177731 &zoom=13", // wplace.live/
     ],
     zh: [
         "宁宁在玩乌蒙地插，铺面是系ぎて",
