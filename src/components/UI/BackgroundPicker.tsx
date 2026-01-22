@@ -1,12 +1,9 @@
 import React, {
+    Dispatch,
+    SetStateAction,
     useContext,
     useEffect,
     useState,
-    // ChangeEvent,
-    // useCallback,
-    // useDeferredValue,
-    // useEffect,
-    // useMemo,
 } from "react";
 import data from "../../background.json";
 import { getBackground } from "../../utils/GetBackground";
@@ -14,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import IBackground from "../../types/IBackground";
 import { SoftErrorContext } from "../../contexts/SoftErrorContext";
 import { IBackgroundBookmark } from "../../types/IBackgroundBookmark";
-// import { fuzzy } from "fast-fuzzy";
 
 const pngList = ["bg_transparent"];
 interface IBackgroundList {
@@ -53,8 +49,8 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
             const selectedBackground = document.querySelector(
                 `img[src="${background.filename.replace(
                     "/background_compressed/",
-                    "/background_low_jpg/"
-                )}"]`
+                    "/background_low_jpg/",
+                )}"]`,
             );
             selectedBackground?.scrollIntoView({
                 behavior: "smooth",
@@ -75,7 +71,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
             localStorage.setItem("backgroundBookmark", JSON.stringify([]));
         } else {
             const bookmarks: IBackgroundBookmark = JSON.parse(
-                backgroundBookmarkCookie
+                backgroundBookmarkCookie,
             );
             setBackgroundBookmarks(bookmarks);
         }
@@ -99,7 +95,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
 
             setFilterValue("all");
             if (bg.includes("bg_s000362")) {
-                setErrorInformation("Give her a break. She's happy now.");
+                calculateMessage(setErrorInformation);
             }
         } catch (error) {
             setErrorInformation(String(error));
@@ -134,7 +130,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
         setBackgroundBookmarks([...backgroundBookmarks]);
         localStorage.setItem(
             "backgroundBookmark",
-            JSON.stringify(backgroundBookmarks)
+            JSON.stringify(backgroundBookmarks),
         );
     };
 
@@ -195,7 +191,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
                 <div id="picker">
                     <div id="picker-close" className="flex-vertical">
                         {background.filename.startsWith(
-                            "/background_compressed/"
+                            "/background_compressed/",
                         ) && (
                             <button
                                 className="btn-circle btn-white"
@@ -244,7 +240,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
                             renderBackgroundType("bookmarks")}
                         {filterValue === "all"
                             ? Object.keys(backgroundList.background).map(
-                                  renderBackgroundType
+                                  renderBackgroundType,
                               )
                             : renderBackgroundType(filterValue)}
                     </div>
@@ -265,7 +261,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
                             backgroundBookmarks.includes(
                                 background?.filename
                                     .replace("/background_compressed/", "")
-                                    .replace(".jpg", "")
+                                    .replace(".jpg", ""),
                             )
                                 ? "bi bi-star-fill background-bookmark"
                                 : "bi bi-star background-bookmark"
@@ -286,6 +282,27 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
         </>
     );
 };
+
+function calculateMessage(setMessage: Dispatch<SetStateAction<string>>) {
+    const count = Number(localStorage.getItem("thornsBG") ?? 1);
+
+    switch (count) {
+        case 1:
+            setMessage("Give her a break. She's happy now.");
+            localStorage.setItem("thornsBG", "2");
+            break;
+        case 2:
+            setMessage(
+                "Through no fault of SEKAI Stories, you have managed to trap yourself using this only background.",
+            );
+            localStorage.setItem("thornsBG", "3");
+            break;
+        case 3:
+            setMessage("You're not a good person, you know that, right?");
+            localStorage.setItem("thornsBG", "4");
+            new Audio("/sound/glados.wav").play();
+    }
+}
 
 export default BackgroundPicker;
 
